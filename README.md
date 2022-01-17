@@ -1,3 +1,20 @@
+This is not live yet.
+To look at the website:
+* check it out locally
+* run `mvn clean compile`
+* open `db-site\target\site\index.html` in your favorite web browser.
+
+# TODO
+* Fix .htaccess -> `RewriteBase`
+* Fix .asf.yaml.publish -> `subdir`
+* Fix .asf.yaml -> `notifications`
+* Enable/use Actions
+  * Recreate-site-branch
+* Anything else?
+* 
+* Proof reading
+
+
 # Apache DB Website
 
 This repository contains the sources for the [Apache DB website](https://db.apache.org/).

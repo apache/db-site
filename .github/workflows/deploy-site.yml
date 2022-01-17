@@ -1,0 +1,168 @@
+# Builds and deploys the site if the build was successful
+#
+# This job builds the website and deploys the build artifacts to the 'content' directory
+# Any additional files that are not part of the site build but should be published (e.g. website configuration files) must be handled explicitly
+# See step "Move additional resources to build directory" and sub-steps "Dropping old site resources" and "Adding new site configuration" of the 'publish' step
+name: Build & Deploy Site
+
+# Conditions necessary to trigger a build
+on:
+  push:
+    # Only run for pushes to the following branches
+    #
+    # Including the branch that is pushed by this action will lead to an infinite loop
+    branches:
+      - 'main'
+
+    # Only build if a file in one of these paths has been changed
+    paths:
+      - 'src/main/asciidoc/**'
+      - 'src/main/template/**'
+      - '.asf.yaml.publish'
+      - '.htaccess'
+
+
+jobs:
+  deploy-site:
+    name: Build & Deploy Site
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+
+    env:
+      # The name of the branch used to publish the website build artifacts
+      BRANCH_NAME: publish
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+
+
+      - name: Build Site
+        run: |
+          mvn clean package
+
+
+      # Determines the short sha of the commit that triggered the build
+      - name: Determine Short SHA
+        if: success()
+        id: short-sha
+        run: |
+          short_sha=$(git rev-parse --short=10 $GITHUB_SHA)
+          echo "::set-output name=SHORT_SHA::$short_sha"
+
+
+      # Determines the author data of the HEAD commit
+      # Sets up the author data to be used for the site deploy commit
+      - name: Determine HEAD Commit Author Data
+        if: success()
+        id: author-data
+        run: |
+          echo "Reading author data"
+          author_name=$(git log -1 --format='%aN' HEAD)
+          author_email=$(git log -1 --format='%aE' HEAD)
+
+          echo "Setting up author data to use for deploy commit"
+          git config --local user.name $author_name
+          git config --local user.email $author_email
+
+
+      # Adds additional configuration files that are supposed to be included in the page deploy to the build directory
+      #
+      # This ensures that such files are preserved when checking out the publish branch
+      - name: Add Additional Resources to Build Directory
+        if: success()
+        run: |
+          cp -v .asf.yaml.publish target/site/.asf.yaml
+          cp -v .htaccess target/site/
+
+
+      - name: Check Out Site Branch
+        if: success()
+        run: |
+          git fetch origin ${{ env.BRANCH_NAME }}
+          git checkout -b ${{ env.BRANCH_NAME }} origin/${{ env.BRANCH_NAME }}
+
+
+      # Drops all existing files and folders except the base folder and the resources excluded by the regex
+      # This ensures that old configuration files that were removed on the main branch will be removed from the site branch as well
+      # Additional resources to exclude can be added by modifying the regex or adding new regex by using "-a -not -regex '...'"
+      - name: Drop Old Site Resources
+        if: success()
+        run: |
+          find . \
+            -mindepth 1 -regextype posix-extended \
+            -not -regex '^\./(target|.git)(/.*)?$' \
+            -delete -print
+
+
+      # Moves additional configuration files that were added to the build directory to their target directory
+      # In general, this should move all resources touched in the step 'Add additional resources to build directory'
+      - name: Add New Site Configuration
+        if: success()
+        run: |
+          mv -v target/site/.asf.yaml ./
+          mv -v target/site/.htaccess ./
+
+
+      # Moves the new site resources from the build directory to the content directory
+      - name: Add New Site Resources
+        if: success()
+        run: |
+          mkdir -v content
+          mv -v target/site/* content/
+
+          # Explicitly removes build dir
+          # This checks whether there are any remaining resources that were not moved to the correct location
+          # Drops the rest of the resources in the target directory if there are any
+          echo
+          echo "Removing site build directory"
+
+          if rmdir -v target/site
+            then
+              echo
+              echo "Removing remaining build directories"
+              rm -r -v target
+
+            else
+              echo
+              echo "Failed due to resources remaining in site build directory:"
+              tree target/site
+
+              exit 1
+          fi
+
+
+      - name: Stage Changes
+        id: stage-changes
+        if: success()
+        run: |
+          git add -v -A
+
+          if $(git diff -s --cached --exit-code)
+            then
+              # nothing staged
+              echo "Nothing to commit"
+              has_staged_changes=false
+            else
+              # something staged
+              has_staged_changes=true
+          fi
+
+          echo "::set-output name=HAS_STAGED_CHANGES::$has_staged_changes"
+
+
+      # Publishes the build results
+      # Does nothing if there is nothing to publish
+      - name: Publish Results
+        if: success() && steps.stage-changes.outputs.HAS_STAGED_CHANGES == 'true'
+        run: |
+          echo "Committing changes"
+          git commit -m "Auto-deploy site for commit ${{ steps.short-sha.outputs.SHORT_SHA }}"
+          echo
+
+          echo "Pushing site branch"
+          git push origin ${{ env.BRANCH_NAME }}

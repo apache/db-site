@@ -1,0 +1,99 @@
+# Recreates the orphan site branch
+#
+# This workflow is set up as a fallback in cases where the site branch has been deleted
+# The workflow to automatically publish the site after a push to the main branch relies on there already being a functioning site branch
+# This will not cause the website to be published; another push to the site branch (e.g. thought the deploy workflow) is necessary for this
+name: Recreate Site Branch - ONLY USE IF SITE BRANCH GOT DELETED
+
+# Conditions necessary to trigger a build
+#
+# Can only be triggered manually
+on:
+  workflow_dispatch:
+
+
+jobs:
+  recreate-site:
+    name: Build & Deploy Site
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+
+    env:
+      # The name of the branch used to publish the website build artifacts
+      BRANCH_NAME: publish
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: main
+          fetch-depth: 1
+
+
+      - name: Build Site
+        run: |
+          mvn clean package
+
+
+      # Determines the short sha of the commit that triggered the build
+      - name: Determine Short SHA
+        if: success()
+        id: short-sha
+        run: |
+          short_sha=$(git rev-parse --short=10 $GITHUB_SHA)
+          echo "::set-output name=SHORT_SHA::$short_sha"
+
+
+      # Determines the author data of the HEAD commit
+      # Sets up the author data to be used for the site deploy commit
+      - name: Determine HEAD Commit Author Data
+        if: success()
+        id: author-data
+        run: |
+          echo "Reading author data"
+          author_name=$(git log -1 --format='%aN' HEAD)
+          author_email=$(git log -1 --format='%aE' HEAD)
+
+          echo "Setting up author data to use for deploy commit"
+          git config --local user.name $author_name
+          git config --local user.email $author_email
+
+
+      # Creates and checks out a new orphan branch used to publish the site
+      - name: Create Orphan Site Branch
+        if: success()
+        run: |
+          git checkout --orphan ${{ env.BRANCH_NAME }}
+
+
+      # Drops all content other than the site data from the workspace
+      # This creates a minimal state that only contains the website build results
+      - name: Drop Content Other Than Site Data
+        if: success()
+        run: |
+          git reset
+          rm .gitignore
+          git add target/site
+          git add .asf.yaml.publish .htaccess
+          git clean -df
+
+
+      # Moves the site content and site configuration to the correct location
+      - name: Move Content and Site Configuration
+        if: success()
+        run: |
+          mkdir -v content
+          git mv -v target/site/* content/
+          git mv -v .asf.yaml.publish .asf.yaml
+
+
+      # Creates a single commit containing only the site build artifacts and site configuration files
+      # The commit is created with the author data set up in the previous step
+      # Force-pushes the created branch, overwriting the previously published site build
+      - name: Publish Results
+        if: success()
+        run: |
+          git commit -m "Auto-deploy site for commit ${{ steps.short-sha.outputs.SHORT_SHA }}"
+          git push -f origin ${{ env.BRANCH_NAME }}

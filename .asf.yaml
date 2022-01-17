@@ -1,0 +1,42 @@
+github:
+  description: "Apache DB project"
+  homepage: https://db.apache.org/
+  labels:
+    - db
+    - jdo
+    - derby
+    - torque
+    - ddlutils
+    - apache
+    - java
+
+  enabled_merge_buttons:
+    # disable merge button:
+    merge:   false
+    # enable squash button:
+    squash:  true
+    # enable rebase button:
+    rebase:  true
+
+  protected_branches:
+    # rules for the 'main' branch
+    main:
+      # disallows pushing merge commits to the branch
+      required_linear_history: true
+
+      required_status_checks:
+        # strict means "Require branches to be up to date before merging".
+        strict: false
+
+    # rules for the 'publish' branch
+    #
+    # set up branch protection for site publishing branch to avoid accidental deletion
+    # force-pushes are still necessary as they are used to deploy new versions of the site
+    publish:
+      allow_force_pushes: true
+
+notifications:
+  commits:      jdo-commits@db.apache.org
+  issues:       jdo-dev@db.apache.org
+  pullrequests: jdo-dev@db.apache.org
+  jira_options: link label
