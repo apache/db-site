@@ -1,0 +1,214 @@
+<%#encoding:UTF-8%><!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- No caching headers -->
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="expires" content="-1"/>
+    <meta name="keywords" content="DB, Derby, JDO, Torque, Apache"/>
+    <meta name="description" content="Apache DB"/>
+
+    <title><%= doctitle(:sanitize => true) || (attr 'untitled-label') %></title>
+
+    <link rel="icon" type="image/png" href="<%= (attr :_basedir) %>images/db-logo-white.png"/>
+
+    <!--
+        Apache DB Documentation Template
+        ==================================
+        This template derived various aspects from Apache Deltaspike template, the Apache ISIS template and the Datanucleus template.
+        This template uses 
+        * Bootstrap v3.3.7 (https://getbootstrap.com/) for navbar.
+        * Asciidoctor "foundation" CSS
+        * Bootswatch "cosmo" theme for Bootstrap (https://bootswatch.com/cosmo).
+        * Bootstrap TOC plugin v0.4.1 (https://afeld.github.io/bootstrap-toc/) for the table of contents.
+        * jQuery (necessary for Bootstrap's JavaScript plugins)
+        * Font-Awesome for some icons used by Asciidoctor
+        NOTE: tried using Font-Awesome CSS hosted locally but then fails to work!
+    -->
+    <link href="<%= (attr :_basedir) %>css/bootswatch/3.3.7/bootstrap-cosmo.css" rel="stylesheet"/>
+    <link href="<%= (attr :_basedir) %>css/bootstrap-toc/0.4.1/bootstrap-toc.min.css" rel="stylesheet"/>
+
+    <link href="<%= (attr :_basedir) %>css/asciidoctor/foundation.css" rel="stylesheet"/>
+    <link href="<%= (attr :_basedir) %>css/datanucleus_theme.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <%
+       def is_toc?
+         not (attributes.has_key?('notoc'))
+       end
+     %>
+    
+     <%
+       def is_footer?
+        not (attributes.has_key?('nofooter'))
+       end
+     %>
+
+    <%
+       def is_no_title?
+         attributes.has_key?('notitle')
+       end
+    %>
+
+    <%
+       def is_general?
+         attributes.has_key?('general')
+       end
+    %>
+    <%
+       def is_subprojects?
+         attributes.has_key?('subprojects')
+       end
+      %>
+    <%
+       def is_foundation?
+         attributes.has_key?('foundation')
+       end
+    %>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="<%= (attr :_basedir) %>js/bootstrap/3.3.7/bootstrap.min.js"></script>
+    <script src="<%= (attr :_basedir) %>js/bootstrap-toc/0.4.1/bootstrap-toc.min.js"></script>
+
+    <!-- Coderay syntax formatter -->
+    <style type="text/css">
+        <%= ::Asciidoctor::Stylesheets.instance.coderay_stylesheet_data %>
+    </style>
+</head>
+<body data-spy="scroll" data-target="#toc">
+<!-- Navbar -->
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <!-- Three line menu button for use on mobile screens -->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- 'style' added to align image with navbar. FIX THIS -->
+            <a class="navbar-brand" href="https://db.apache.org/">
+                <!-- img style="margin-top: -12px;" alt="Brand" width="405.5" height="45.5" src="<%= (attr :_basedir) %>images/db-logo-blue.png"/ -->
+                <img style="margin-top: -12px;" alt="Brand" width="250" height="45.5" src="<%= (attr :_basedir) %>images/db-logo-white.png"/>
+            </a>
+            <!-- TODO Any way to abstract the version from Maven? -->
+            <!-- a class="navbar-brand" href="<%= (attr :_basedir) %>index.html">Apache DB</a -->
+        </div>
+        <!-- Navbar that will collapse on mobile screens -->
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+
+                  <!-- menu item General -->
+
+                  <% if is_general? then %>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="background-color:#2385c6">General<span class="caret"></span></a>
+                  <% else %>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">General<span class="caret"></span></a>
+                  <% end %>
+                  <ul class="dropdown-menu">
+                        <li><a href="<%= (attr :_basedir) %>index.html">About / News</a></li>
+                        <li><a href="http://www.apache.org/licenses/LICENSE-2.0">License</a></li>
+                        <li><a href="<%= (attr :_basedir) %>mail.html">Mailing Lists</a></li>
+                        <li><a href="<%= (attr :_basedir) %>whoweare.html">Who We Are</a></li>
+                        <li><a href="<%= (attr :_basedir) %>source-repos.html">Source Repositories</a></li>
+                        <li><a href="<%= (attr :_basedir) %>license.html">License</a></li>
+                    </ul>
+                </li>
+
+                <!-- menu item Subprojects -->
+
+                <li class="dropdown">
+                  <% if is_subprojects? then %>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="background-color:#2385c6">Subprojects<span class="caret"></span></a>
+                  <% else %>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Subprojects<span class="caret"></span></a>
+                  <% end %>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://db.apache.org/derby/">Derby</a></li>
+                        <li><a href="https://db.apache.org/jdo/">JDO</a></li>
+                        <li><a href="https://db.apache.org/torque/">Torque</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li>Retired Subprojects</li>
+                        <li><a href="https://db.apache.org/ddlutils/">DdlUtils</a></li>
+                        <li><a href="http://attic.apache.org/projects/ojb.html">ObJectRelationalBridge</a></li>
+                    </ul>
+                </li>
+
+                <!-- menu item The Foundation -->
+
+                <li class="dropdown">
+                  <% if is_foundation? then %>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="background-color:#2385c6">The Foundation<span class="caret"></span></a>
+                  <% else %>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">The Foundation<span class="caret"></span></a>
+                  <% end %>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://www.apache.org">Apache</a></li>
+                        <li><a href="https://www.apache.org/foundation/thanks.html">Thanks</a></li>
+                        <li><a href="https://www.apache.org/foundation/sponsorship.html">Donate</a></li>
+                        <li><a href="https://www.apache.org/security">Security</a></li>
+                        <li><a href="https://www.apache.org/foundation/how-it-works.html">How It Works</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+           <!-- 'style' added to fix height of input box. FIX THIS -->
+            <form class="navbar-form navbar-left" role="search" id="search-form" action="https://www.google.com/search" method="get" style="padding: 1px 15px;">
+                <div class="form-group">
+                    <input name="sitesearch" value="db.apache.org" type="hidden">
+                    <input name="q" type="text" class="form-control" placeholder="Search" style="margin-top: 7px; padding: 1px; border-radius: 5px; height: 30px; vertical-align: middle;">
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <% if is_toc? then %>
+        <div class="row-fluid">
+            <div class="col-sm-9">
+<!--                <div class="page-title">
+                    <h3><%= document.name %></h3>
+                </div>
+-->
+                <div id="doc-content">
+                    <%= document.content %>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <nav id="toc" data-spy="affix" data-toggle="toc"></nav>
+            </div>
+        </div>
+    <% else %>
+        <!-- No TOC -->
+        <div class="row-fluid">
+            <div class="col-sm-12">
+                <% if is_no_title? then %>
+                    <!-- no heading -->
+                <% else %>
+                    <div class="page-title">
+                        <h4><%= document.name %></h4>
+                    </div>
+                <% end %>
+                <div id="doc-content">
+                    <%= document.content %>
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>
+<% if is_footer? then %>
+  <footer style="color:#fff; background-color:#222222; padding: 5px;">
+  <div class="container">
+      <p class="text-center" style="margin-top:16px">Copyright &copy; 2005-2022 Apache Software Foundation, Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" title="Apache License">Apache License, Version 2.0.</a></p>
+      <p class="text-center" style="margin-top:16px">Apache, Apache DB, Apache Derby, Apache Torque, Apache JDO, Apache DDLUtils, the Derby hat logo, the Apache JDO logo, and the Apache feather logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners.</p>
+  </div>
+  </footer>
+<% end %>
+</body>
+</html>
+

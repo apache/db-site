@@ -1,0 +1,62 @@
+:_basedir:
+:_imagesdir: images/
+:grid: cols
+:notoc:
+:notitle:
+:metadata:
+
+[[index]]
+
+
+= Contact us!
+
+== Contact us
+
+Typical points of contact are listed below. Don't hesitate to get in touch if you have questions related to the Apache DB project!
+
+
+=== Product Support
+
+If you have questions or comments about the software or documentation on this site, please subscribe to the appropriate mailing list listed [here](mail.html).
+
+
+=== Security Issues
+
+If you would like to report a security issue with any of our products, you may contact
+mailto:security@apache.org[security@apache.org].
+
+
+=== The DB Project
+
+If after reviewing the material on http://db.apache.org/[this site], you have
+questions regarding DB or the link:management.html[Project Management Committee],
+you may post them to the link:mail.html[General mailing list].
+
+
+**Proposing a New Subproject**
+
+See our link:newproject.html[DB Subproject Proposals] page.
+
+
+=== The DB Website(s)
+
+Most of the DB Website is maintained by the individual subprojects. Any comments regarding a product's web pages should be directed to the appropriate subproject.
+
+The portion of the Web site under db.apache.org/ *site* is managed as a joint
+effort by the subprojects and the DB Project Management Committee. Comments
+regarding these pages can be directed to the General mailing list, or to the
+[DB Webmaster's](mailto:webmaster@db.apache.org) mail box.
+
+If you are unsure where to post, contact the
+[DB Webmaster](mailto:webmaster@db.apache.org), who will direct you to the appropriate
+party.
+
+
+=== The Apache Software Foundation
+
+The DB Project is an effort of the
+http://www.apache.org/[Apache Software Foundation]. The address for general
+ASF correspondence and licensing questions is apache@apache.org
+
+You can find more contact information for the Apache Software Foundation on the
+http://www.apache.org/foundation/contact.html[contact page of the main Apache site].

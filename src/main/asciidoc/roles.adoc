@@ -1,0 +1,123 @@
+:_basedir:
+:_imagesdir: images/
+:grid: cols
+:notoc:
+:notitle:
+:metadata:
+
+[[index]]
+
+
+= Roles and Responsibilities
+
+== Roles and Responsibilities
+
+The roles and responsibilities that people can assume in the project are
+based on merit. Everybody can help no matter what their role. Those who
+have been long term or valuable contributors to the project obtain the
+right to vote and commit directly to the source repository.
+
+
+=== Users
+
+Users are the people who use the products of the Project. People in this
+role aren't contributing code, but they are using the products,
+reporting bugs, making feature requests, and such. This is by far the
+most important category of people as, without users, there is no reason
+for the Project.
+
+When a user starts to contribute code or documentation patches, they
+become a Contributor.
+
+
+=== Contributors
+
+Contributors are the people who write code or documentation patches or
+contribute positively to the project in other ways. A volunteer's
+contribution is always recognized. In source code, all volunteers who
+contribute to a source file may add their name to the list of authors
+for that file.
+
+
+=== Committers
+
+Contributors who give frequent and valuable contributions to a
+subproject of the Project can have their status promoted to that of a
+*Committer* for that subproject. A Committer has write access to the
+source code repository and gains voting rights allowing them to affect
+the future of the subproject.
+
+In order for a Contributor to become a Committer, another Committer can
+nominate that Contributor or the Contributor can ask for it.
+
+Once a Contributor is nominated, all of the Committers for a subproject
+will vote. If there are at least 3 positive votes and no negative votes,
+the Contributor is converted into a Committer and given write access to
+the source code repository for that subproject. This is an example offer
+letter that should be sent to the volunteer after 3 positive votes have
+been received:
+
+....
+        Dear Contributor,
+
+        The DB project would like to offer you commit privileges.
+        We have been impressed with your contributions up till now, and
+        believe that your involvement will improve the quality of the
+        libraries we produce.
+
+        It is important that you realize that these commit privileges give
+        you access to the specific DB project repository for which you
+        are involved with. They do not provide commit access to any other
+        Apache based project. Those projects will have to grant you commit
+        privileges themselves.
+
+        If you are interested in having commit privileges, please just let us
+        know, and we will setup an account on apache.org. It would expedite
+        the process if you could provide your preferred account name and
+        possibly a public SSH key. This process could take a few days once
+        we get this information.
+
+        We all hope that you accept this invitation.
+
+        The DB Project Management Committee.
+....
+
+Once there are 3 positive votes and the response to the above letter has
+been received, the Contributor must sign and submit the Contributor
+License Agreement (http://apache.org/licenses/#clas[CLA]) as described
+on the ASF http://apache.org/licenses/[Licenses page].
+Once the CLA has been received and processed, the PMC chair should
+request that a new account is created. See details
+http://apache.org/dev/pmc.html#newcommitter[here]. If the new
+committer already has an Apache account, the appropriate SVN access
+should be granted by the PMC chair by following the instructions
+http://apache.org/dev/pmc.html#SVNaccess[here].
+
+*Note 1*: All committers will be given access to the db-site module on
+request. In other words, committers should be able to update the main DB
+website.
+
+At times, Committers may go inactive for a variety of reasons. A
+Committer that has been inactive for 6 months or more may lose their
+status as a Committer. Getting access back is as simple as re-requesting
+it on the project's Developer mailing list.
+
+A list of some of our current Committers can be found in our
+[Project Credits](whoweare.html).
+
+
+=== Management Committee (PMC)
+
+Committers who frequently participate with valuable contributions may
+have their status promoted to that of a *Project Management Committee
+Member*. This committee is the official managing body of the DB Project
+and is responsible for setting overall project direction. In order to
+become a Member, someone on the PMC must nominate the Committer. The
+individual may then be approved with a 3/4 majority of the PMC.
+
+To view the Project Management Committee bylaws, click
+link:management.html[here].
+
+A list of our current PMC Members can be found in our
+link:whoweare.html[Project Credits].
+

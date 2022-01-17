@@ -1,0 +1,49 @@
+:_basedir: 
+:_imagesdir: images/
+:notoc:
+:notitle:
+:grid: cols
+
+[[index]]
+
+image:images/db-logo-blue.png[float="right"]
+
+'''''
+
+== Welcome!
+
+[#DB_Mission]
+== DB Mission
+
+DB is a Project of the
+xref:Apache_Software_Foundation[Apache Software Foundation], charged with the
+creation and maintenance of commercial-quality, open-source, database solutions
+based on software licensed to the Foundation, for distribution at no charge to
+the public.
+
+[#Apache_Software_Foundation]
+== Apache Software Foundation
+
+
+The Apache Software Foundation provides support for the Apache community of
+open-source software http://www.apache.org/foundation/projects.html[projects].
+The Apache projects are characterized by a collaborative, consensus based
+development process, an open and pragmatic software
+http://www.apache.org/foundation/license-FAQ.html[license], and a desire to create high quality software that leads the way in its field.
+
+== More Information
+
+For more about the Apache DB Project, see
+
+   * link:guidelines.html[DB Project Guidelines]
+   * link:newproject.html[DB Subproject Proposals]
+   * link:contact.html[Contacting Us]
+
+For more about the Apache Software Foundation, visit the Foundation's Web site
+
+   * http://www.apache.org/[Foundation Home page]
+   * http://www.apache.org/foundation/licence-FAQ.html[Apache License and Distribution FAQ]
+   * http://www.apache.org/dev/project-creation.html[Procedures for Creating an ASF Project]
+   * http://www.apache.org/foundation/sponsorship.html[Sponsorship]
+   * http://www.apache.org/foundation/thanks.html[Thanks]
+

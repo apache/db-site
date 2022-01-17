@@ -1,0 +1,136 @@
+:_basedir:
+:_imagesdir: images/
+:grid: cols
+:notoc:
+:notitle:
+:metadata:
+
+[[index]]
+
+
+= Decision Making
+
+== Decision Making
+
+All [Contributors](roles.html) are encouraged to participate in
+decisions, but the decision itself is made by those that have
+[Committer](roles.html) status in the Project. In other words, the
+Project is a *Minimum Threshold Meritocracy*.
+
+Any subscriber to the list may vote on any issue or action item.
+However, the only binding votes are those cast by a Committer. If the
+vote is about a change to the source code or documentation and the
+primary uthor is a Contributor and not a Committer, the primary author
+of whatis being changed may also cast a binding vote on that issue.
+
+The act of voting carries certain obligations. Voting members are not
+only stating their opinion, they are also agreeing to help do the work.
+
+Each vote can be made in one of three flavors:
+
+<table class="altBgColor">
+<tr class="b">
+    <td>
+        <strong>+1</strong>
+    </td>
+    <td>
+        "Yes," "Agree," or "the action should be performed."<br/>
+        On some issues this is only binding if the voter has tested the
+        action on their own system(s).
+    </td>
+</tr>
+<tr class="a">
+    <td>
+        <strong>+/-0</strong>
+    </td>
+    <td>
+        "Abstain," "no opinion".<br/>
+        An abstention may have detrimental effects if too many people
+        abstain.
+    </td>
+</tr>
+<tr class="b">
+    <td>
+        <strong>-1</strong>
+    </td>
+    <td>
+        "No."<br/>
+        On issues where consensus is required, this vote counts as a
+        <strong>veto</strong>. All vetos must contain an explanation of
+        why the veto is appropriate. Vetos with no explanation are void.
+        No veto can be overruled. If you disagree with the veto, you
+        should lobby the person who cast the veto. Voters intending to
+        veto an action item should make their opinions known to the
+        group immediately so that the problem can be remedied as early
+        as possible.
+    </td>
+</tr>
+</table>
+
+An action requiring consensus approval must receive at least **3 binding
++1** votes and **no binding vetos**. An action requiring majority
+approval must receive at least **3 binding +1** votes and more **+1**
+votes than **-1** votes. All other action items are considered to have
+lazy approval until somebody votes **-1**, after which point they are
+decided by either consensus or majority vote, depending on the type of
+action item.
+
+== Action Items
+
+All decisions revolve around *Action Items*. Action Items consist of the following:
+
+   * Long Term Plans
+   * Short Term Plans
+   * Release Plan
+   * Release Testing
+   * Showstoppers
+   * Product Changes
+
+
+=== Long Term Plans
+
+Long term plans are simply announcements that group members are working
+on particular issues related to the Project. These are not voted on, but
+Committers who do not agree with a particular plan, or think that an
+alternative plan would be better, are obligated to inform the group of
+their feelings.
+
+
+=== Short Term Plans
+
+Short term plans are announcements that a volunteer is working on a
+particular set of documentation or code files with the implication that
+other volunteers should avoid them or try to coordinate their changes.
+
+
+=== Release Plan
+
+A release plan is used to keep all volunteers aware of when a release is
+desired, who will be the release manager, when the repository will be
+frozen to create a release, and other assorted information to keep
+volunteers from tripping over each other. Lazy majority decides each
+issue in a release plan.
+
+
+=== Release Testing
+
+After a new release is built, it must be tested before being released to
+the public. Majority approval is required before the release can be
+made.
+
+
+=== Showstoppers
+
+Showstoppers are issues that require a fix be in place before the next
+public release. They are listed in the status file in order to focus
+special attention on these problems. An issue becomes a showstopper when
+it is listed as such in the status file and remains so by lazy
+consensus.
+
+
+=== Product Changes
+
+Changes to the products of the Project, including code and
+documentation, will appear as action items in the status file. All
+product changes to the currently active repository are subject to lazy
+consensus.

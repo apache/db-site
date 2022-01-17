@@ -1,0 +1,166 @@
+:_basedir:
+:_imagesdir: images/
+:grid: cols
+:notoc:
+:notitle:
+:metadata:
+
+[[index]]
+
+
+= Subproject Proposals
+
+== Subproject Proposals
+
+Not every software product is suited for life at DB. Before proposing a new
+subproject, it is important to read this document carefully and determine
+whether your product is a good fit.
+
+=== Criteria
+
+Here are some best practices that we will expect to find in a successful
+proposal. This is not a checklist, but guidelines to help communicate what is
+expected of a DB subproject.
+
+**Meritocracy**.
+Before submitting a proposal, be sure to study the guidelines that
+link:guidelines.html[govern DB subprojects]. These guidelines explain our system
+of Meritocracy, which is the core of the DB Project. If the product
+developers do not wish to adopt this system, then they should **not** donate
+their code to the Project, and should look elsewhere for hosting.
+
+**Community**.
+DB is a Project of the link:http://www.apache.org/[Apache Software Foundation].
+A prime purpose of the ASF is to ensure that the Apache projects continue to
+exist beyond the participation of individual volunteers. Accordingly, a prime
+criteria required of any new subproject is that it already enjoys -- or has a
+high potential for attracting -- an active community of developers and users.
+
+Proposals for non-established products have been accepted, most often when
+the proposal was tendered by experienced open source developers, who
+understand what it means to build a community.
+
+A design document, developer and user documentation, example code, and a
+working implementation all help to increase the likelihood of acceptance.
+Well-documented products tend to build stronger communities than products
+that rely source code and JavaDocs alone.
+
+**Core Developers**.
+To considered, a product must have at least 3 active developers who are
+already involved with the codebase. This is an absolute minimum, and it is
+helpful for there to more than three developers. It is **very** helpful for
+at least one of the developers making the proposal to already be active in a
+DB subproject or other open source initiative.
+
+At DB, the core developers of a product (the link:roles.html[Committers]) manage
+the codebases and make the day-to-day development decisions. We are only
+interested in products that can guided by their own development communities.
+DB provides the infrastructure, and some essential guidelines, but the
+Committers must take responsibility for developing and releasing their own
+product.
+
+**Alignment with existing Apache subprojects**.
+Products that are already used by existing subprojects make attractive
+candidates, since bringing such a codebase into the Apache fold tends to
+benefit both communities. Products with dependencies on existing Apache
+products are also attractive for the same reason.
+
+**Scope**.
+DB products are generally server-side software solutions written for the Java
+platform. Proposals for products outside this venue will have greater
+difficulty in being accepted.
+
+
+=== Warning Signs
+
+These are anti-patterns that we have found detrimental to the success of a
+proposal. Some of these are lesson learned from the school of hard-knocks,
+others are taken from proposals which have been rejected in the past. All
+will raise a red flag, making it unlikely that a proposal will be accepted.
+
+**Orphaned products**.
+Products which have lost their corporate sponsor (for whatever reason) do
+**not** make good candidates. These products will lack a development
+community and won't have the support needed to succeed under the DB umbrella.
+
+For example, we have seen proposals that contain paragraphs like this:
+
+        FooProduct is currently a production quality product, and in
+        fact is being used by a live website. It was developed as a
+        product by FooCompany, with the intention that we would sell
+        it. However, due to various economic factors such as the
+        decline in FooProduct's intended market and the
+        recent difficulties in obtaining venture capital, we have
+        decided that at this time it is not feasible for us to
+        continue in that direction.
+
+The alleged quality of a product is not the prime criteria. To be accepted,
+we must believe that a product will attract volunteers to extend and maintain
+it over the long term. A product like this, arriving with no volunteer
+developers or open source community, does not further
+link:index.html#DB_Mission[DB's mission], and would not be accepted.
+
+We generally recommend that an orphaned product start with an independent
+host, and consider making a proposal after it has started to build a
+community.
+
+**Inexperience with open source**.
+We often receive proposals that start with "We will open our software if you
+choose to accept it." This is the wrong way to approach the proposal process.
+A closed source project does not have an open community, and so we have no
+way to tell if the developers can work in an open source environment.
+Products that have lived on their own and have started to develop their own
+community, have a much better chance of being accepted.
+
+If the product's developers have not worked with open source before, it is
+recommended that they spend some time contributing to an existing open source
+project before trying to manage one of their own. Since DB subprojects are
+managed by their own Committers, it is important that a new product supported
+by people who understand how open source works.
+
+**Homogenous developers**.
+Apache communities attract developers with diverse backgrounds. Products with
+a tightly-knit team of developers may have difficulty shepherding new
+developers into the fold. It is vital that we believe the developers will
+discuss development issues openly with the community, and **not** make
+decisions behind closed doors. We are especially wary of products with
+developers who all share a common employer or geographic location.
+
+**Reliance on salaried developers**.
+DB has strong ties to the business community. Many of our developers are
+encouraged by their employers to work open source projects as part of their
+regular job. We feel that this is a Good Thing, and corporations should be
+entitled to contribute to open source, same as anyone else. However, we are
+wary of products which rely strongly on developers who only work on open
+source products when they are paid to do so. A product at DB must continue to
+exist beyond the participation of individual volunteers. We believe the best
+indicator of success is when developers volunteer their own time to work open
+source projects.
+
+**No ties to other Apache products**.
+Products **without** a tie to any existing Apache product, and that have
+strong dependencies on alternatives to Apache products, do not make good
+candidates. Many Apache products are related through common licenses,
+technologies, and through their volunteers. Products without licensing,
+technology, or volunteers in common will have trouble attracting a strong
+community.
+
+**A fascination with the Apache brand**. The
+http://www.apache.org/licenses/[Apache Software License] is quite liberal
+and allows for the code to used in commercial products. This can induce
+people to donate a commercial codebase to the ASF, allow it developed as open
+source for a time, and then convert it back to commercial use. While this
+would legal under the Apache Software License, we are wary of proposals that
+seem to be more interested in exposure than community.
+
+
+=== Subproject Alternatives
+
+=== Who Decides
+
+Final acceptance is based the rules defined in the
+link:management.html[Project Management Committee Bylaws] which state that
+"Creation of a new subproject requires approval by 3/4 vote of the PMC." The
+proposal for a new subproject must submitted to the DB General
+link:mail.html[mailing list], where the PMC conducts business.  All discussion
+regarding the proposal will occur the General list, including the final vote.

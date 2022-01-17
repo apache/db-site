@@ -1,0 +1,147 @@
+:_basedir:
+:_imagesdir: images/
+:grid: cols
+:notoc:
+:notitle:
+:metadata:
+
+[[index]]
+
+
+= Organization of Source Repositories
+
+== Organization of Source Repositories
+
+The Project's codebase is maintained in shared information repositories using
+Subversion. Only Committers have write access to these repositories. Everyone
+has anonymous read access.
+
+All Java Language source code in the repository must be written in
+conformance to the 
+http://www.oracle.com/technetwork/java/codeconvtoc-136057.html[Code
+Conventions for the Java Programming Language] as published
+by Sun, or in conformance with another well-defined convention specified by
+the subproject.
+
+=== License
+
+All source code committed to the Project's repositories must be covered by
+the http://www.apache.org/foundation/licence-FAQ.html[Apache License] or
+contain a copyright and license that allows redistribution under the same
+conditions as the Apache License.
+
+Committers should update the copyright notice on the Apache License to
+include the current year when they revise a source file. If it is 2002, and
+you revise a source file from 1999, change the copyright notice in the
+license to cite "1999, 2002". If the file was from 2001, we would change it
+to 2001-2002. And so forth. This will happen most often in the early part of
+a year, but maintenance of the copyright date should occur year-round, as
+needed.
+
+Any code, document, or binary that is committed to the Project's
+repositories, but not being donated to the ASF, must be clearly marked as
+such. All contributors should have a
+http://www.apache.org/licenses/#clas[Contributor License Agreement] on
+file.
+
+Any JAR committed to the Project's repositories **must** be licensed for
+redistribution. BSD and MPL style licenses are generally fine, but many Sun
+JARs do not permit redistribution.
+
+=== Status Files
+
+Each of the Project's active source code repositories contain a file named
+STATUS which is used to keep track of the agenda and plans for work within
+that repository. The status file includes information about release plans, a
+summary of code changes committed since the last release, a list of proposed
+changes that are under discussion, brief notes about items that individual
+developers are working on or want discussion about, and anything else that
+may be useful to help the group track progress.
+
+It is recommended that the active status files are automatically posted to
+the developer mailing lists three times per week.
+
+
+=== Branches
+
+Groups are allowed to create a branch for release cycles, etc. They are
+expected to merge completely back with the main branch as soon as their
+release cycle is complete. All branches currently in use should be documented
+by the respective projects. For example,
+http://db.apache.org/derby/dev/derby_source.html#Branches[Derby] has a page
+on the site that details the branches currently in use.
+
+
+=== Changes
+
+Simple patches to fix bugs can be committed then reviewed. With a
+commit-then-review process, the Committer is trusted to have a high degree of
+confidence in the change.
+
+Doubtful changes, new features, and large scale overhauls need to be
+discussed before committing them into the repository. Any change that affects
+the semantics of an existing API function, the size of the program,
+configuration data formats, or other major areas must receive consensus
+approval before being committed.
+
+Related changes should be committed as a group, or very closely together.
+Half complete projects should never be committed to the main branch of a
+development repository. All code changes must be successfully compiled on the
+developer's platform before being committed. Also, any unit tests should also
+pass.
+
+The current source code tree for a subproject should be capable of complete
+compilation at all times. However, it is sometimes impossible for a developer
+on one platform to avoid breaking some other platform when a change is
+committed. If it is anticipated that a given change will break the build on
+some other platform, the committer must indicate that in the commit message.
+
+A committed change must be reversed if it is vetoed by one of the voting
+members and the veto conditions cannot be immediately satisfied by the
+equivalent of a "bug fix" commit. The veto must be rescinded before the
+change can be included in any public release.
+Patches
+
+When a specific change to a product is proposed for discussion or voting on
+the appropriate development mailing list, it should be presented in the form
+of input to the patch command. When sent to the mailing list, the message
+should contain a Subject beginning with [PATCH] and a distinctive one-line
+summary in the subject corresponding to the action item for that patch.
+
+The patch should be created by using the svn diff command from the original
+software file(s) to the modified software file(s). It is recommended that you
+submit patches against the latest Subversion versions of the software in
+order to avoid conflicts. This will also ensure that you are not submitting a
+patch for a problem that has already been resolved.
+
+For example:
+
+        diff -u Main.java.orig Main.java >> patchfile.txt
+
+or (preferred)
+
+        svn diff Main.java >> patchfile.txt
+
+or (Win32)
+
+You can use a GUI front-end for http://subversion.apache.org/[Subversion],
+or you can install http://www.cygwin.com[Cygwin] which will enable you to
+use the bash shell and also installs a lot of other utilities (such as diff
+and patch) that will turn your PC into a virtual Unix machine.
+
+All patches necessary to address an action item should be concatenated
+within a single patch message. If later modification to the patch proves
+necessary, the entire new patch should be posted and not just the difference
+between the two patches.
+
+If your email client line wraps the patch, consider placing the patch file up
+on a website and sending a message to the development list with the URL so
+that the developers with commit access can download the commit the patch file
+more easily. You can also add the patch as part of a bug report.
+
+When a patch has been checked into Subversion, the person who checked in the
+patch should send a message to the person who sent the patch in as well as
+the mailing list specifying that the patch has been checked in. The reason is
+that not everyone watches commit messages and it is helpful for others to
+know what has been checked in and when in order to help prevent people from
+applying the patch at the same time.

@@ -1,0 +1,46 @@
+:_basedir:
+:_imagesdir: images/
+:grid: cols
+:notoc:
+:notitle:
+:metadata:
+
+[[index]]
+
+
+= Project Guidelines
+
+== Project Guidelines
+
+This document defines the guidelines of The DB Project. It includes definitions
+of the various categories of membership, who is able to vote, how conflicts are
+resolved by voting, and the procedures to follow for proposing and making
+changes to the codebase of the Project.
+
+   * link:roles.html[Roles and Responsibilities]
+
+     Defines the recognized roles in the project.
+
+   * link:communication.html[Communication]
+
+     Defines how users and developers communicate.
+
+   * link:decisions.html[Decision Making]
+
+     Defines how action items are proposed and voted on.
+
+   * link:source.html[Organization of Source Repositories]
+
+     Defines how the Project's source code is organized and developed.
+
+   * link:management.html[Project Management]
+
+     Defines the roles and responsibilities of the Project Management Committee (PMC).
+
+   * link:newproject.html[New Subproject Proposals]
+
+     Defines the methodology for proposing new top level DB Subprojects.
+
+This is a living document. Changes can be made by the Project Management
+Committee. Suggestions for changes should be discussed on the
+general at db.apache.org link:mail.html[mailing list].

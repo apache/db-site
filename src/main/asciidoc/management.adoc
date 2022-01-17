@@ -1,0 +1,72 @@
+:_basedir:
+:_imagesdir: images/
+:grid: cols
+:notoc:
+:notitle:
+:metadata:
+
+[[index]]
+
+
+= PMC Bylaws
+
+== Project Management Committee Bylaws
+
+The Project Management Committee (PMC) was formed by the Apache Board on 17
+July 2002. The bylaws were last amended on 6 October 2004. There is no preset
+number of seats on the PMC. The PMC will strive to add every committer within
+DB that, in the opinion of the PMC as determined by a vote, displays the
+capability and desire to help guide the DB project. The PMC will nominate a
+chairperson from amongst their ranks for presentation to the Board. The list
+of current members can be found in our link:whoweare.html[Project Credits].
+
+
+=== Roles
+
+The PMC is responsible for the strategic direction and success of the DB
+Project. This governing body is expected to ensure the project's welfare and
+guide its overall direction. The PMC may not necessarily participate in the
+day-to-day coding but is involved in the overall development plans, the
+alleviation of any bottlenecks, the resolution of conflicts, and the overall
+technical success of the project.
+
+The PMC is answerable to the Apache Board with its Chairman serving as
+primary liaison.
+
+
+=== Meetings
+
+The PMC discusses issues and determines strategic direction via mail list.
+All binding votes happen on the PMC list.
+
+
+=== Membership
+
+PMC members may resign at any time. A committer will remain on the DB PMC
+until removed by desire of the committer, action of the board, or vote by the
+PMC. The Chairman may resign as Chairman at any time without resigning
+membership to the PMC. The chairperson will serve until voluntary
+resignation, action of the board, or vote by the PMC. The Chairman or any
+member may be removed from the PMC by a 3/4 vote of the PMC.
+
+In order to be elected to the PMC, a person must have served as a
+link:roles.html[Committer] and be nominated by a PMC Member. The nominee must
+receive 3/4 positive vote with a minimum of 3 positive votes. Abstaining PMC
+voters do not affect the result.
+
+
+=== Creation of Subprojects
+
+PMC members may propose the creation of new subprojects. Creation of a new
+subproject requires approval by 3/4 positve vote with a minimum of 3 positive
+votes of the PMC. Abstaining PMC voters do not affect the result. New code
+enters the DB project in accordance with ASF policy.
+
+
+=== Voting
+
+The call for a vote on issues not detailed here may specify requirements for
+passage. The minimum and default requirement for a passing vote is a simple
+majority of PMC members casting ballots. The default voting period is 10 days
+and the minimum is 7 days unless the success or failure is arithmetically
+known.

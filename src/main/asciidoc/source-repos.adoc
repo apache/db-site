@@ -1,0 +1,53 @@
+:_basedir:
+:_imagesdir: images/
+:grid: cols
+:notoc:
+:notitle:
+:metadata:
+
+[[index]]
+
+
+== Source Repositories
+
+=== DdlUtils Source Repository Info
+
+link:http://svn.apache.org/viewvc/db/ddlutils/trunk/[Web View]
+
+Anonymous: scm:svn:http://svn.apache.org/repos/asf/db/ddlutils/trunk
+
+Developer: scm:svn:https://svn.apache.org/repos/asf/db/ddlutils/trunk
+
+
+=== Derby Source Repository Info
+
+link:http://svn.apache.org/viewvc/db/derby/code/trunk/[Web View]
+
+Anonymous: scm:svn:http://svn.apache.org/repos/asf/db/derby/code/trunk
+
+Developer: scm:svn:https://svn.apache.org/repos/asf/db/derby/code/trunk
+
+
+=== Java Data Objects (JDO) Source Repository Info
+
+Apache's GitBox: https://gitbox.apache.org/repos/asf/db-jdo.git
+
+Apache on GitHub: https://github.com/apache/db-jdo.git
+
+
+=== ObJectRelationalBridge Source Repository Info
+
+link:http://svn.apache.org/viewvc/db/ojb/trunk/[Web View]
+
+Anonymous: scm:svn:http://svn.apache.org/repos/asf/db/ojb/trunk
+
+Developer: scm:svn:https://svn.apache.org/repos/asf/db/ojb/trunk
+
+
+=== Torque Source Repository Info
+
+link:http://svn.apache.org/viewvc/db/torque/[Web View]
+
+Anonymous: scm:svn:http://svn.apache.org/repos/asf/db/torque/
+
+Developer: scm:svn:https://svn.apache.org/repos/asf/db/torque/
