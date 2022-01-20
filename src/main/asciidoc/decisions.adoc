@@ -12,60 +12,49 @@
 
 == Decision Making
 
-All [Contributors](roles.html) are encouraged to participate in
+All link:roles.html[Contributors] are encouraged to participate in
 decisions, but the decision itself is made by those that have
-[Committer](roles.html) status in the Project. In other words, the
+link:roles.html[Committer] status in the Project. In other words, the
 Project is a *Minimum Threshold Meritocracy*.
 
 Any subscriber to the list may vote on any issue or action item.
 However, the only binding votes are those cast by a Committer. If the
 vote is about a change to the source code or documentation and the
-primary uthor is a Contributor and not a Committer, the primary author
-of whatis being changed may also cast a binding vote on that issue.
+primary author is a Contributor and not a Committer, the primary author
+of what is being changed may also cast a binding vote on that issue.
 
 The act of voting carries certain obligations. Voting members are not
 only stating their opinion, they are also agreeing to help do the work.
 
 Each vote can be made in one of three flavors:
 
-<table class="altBgColor">
-<tr class="b">
-    <td>
-        <strong>+1</strong>
-    </td>
-    <td>
-        "Yes," "Agree," or "the action should be performed."<br/>
+
+
+[cols=",",]
+|===
+
+
+| *+1* | "Yes," "Agree," or "the action should be performed."
+
         On some issues this is only binding if the voter has tested the
         action on their own system(s).
-    </td>
-</tr>
-<tr class="a">
-    <td>
-        <strong>+/-0</strong>
-    </td>
-    <td>
-        "Abstain," "no opinion".<br/>
+
+| *+/-0* | "Abstain," "no opinion".
+
         An abstention may have detrimental effects if too many people
         abstain.
-    </td>
-</tr>
-<tr class="b">
-    <td>
-        <strong>-1</strong>
-    </td>
-    <td>
-        "No."<br/>
+| *-1* | "No."
+
         On issues where consensus is required, this vote counts as a
-        <strong>veto</strong>. All vetos must contain an explanation of
+        *veto*. All vetos must contain an explanation of
         why the veto is appropriate. Vetos with no explanation are void.
         No veto can be overruled. If you disagree with the veto, you
         should lobby the person who cast the veto. Voters intending to
         veto an action item should make their opinions known to the
         group immediately so that the problem can be remedied as early
         as possible.
-    </td>
-</tr>
-</table>
+
+|===
 
 An action requiring consensus approval must receive at least **3 binding
 +1** votes and **no binding vetos**. An action requiring majority
