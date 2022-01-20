@@ -103,7 +103,7 @@ status as a Committer. Getting access back is as simple as re-requesting
 it on the project's Developer mailing list.
 
 A list of some of our current Committers can be found in our
-[Project Credits](whoweare.html).
+link:whoweare.html[Project Credits].
 
 
 === Management Committee (PMC)

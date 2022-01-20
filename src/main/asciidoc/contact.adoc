@@ -17,7 +17,7 @@ Typical points of contact are listed below. Don't hesitate to get in touch if yo
 
 === Product Support
 
-If you have questions or comments about the software or documentation on this site, please subscribe to the appropriate mailing list listed [here](mail.html).
+If you have questions or comments about the software or documentation on this site, please subscribe to the appropriate mailing list listed link:mail.html[here].
 
 
 === Security Issues
@@ -48,7 +48,7 @@ regarding these pages can be directed to the General mailing list, or to the
 [DB Webmaster's](mailto:webmaster@db.apache.org) mail box.
 
 If you are unsure where to post, contact the
-[DB Webmaster](mailto:webmaster@db.apache.org), who will direct you to the appropriate
+mailto:webmaster@db.apache.org[DB Webmaster], who will direct you to the appropriate
 party.
 
 
