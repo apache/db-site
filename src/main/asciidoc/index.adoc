@@ -26,10 +26,10 @@ the public.
 
 
 The Apache Software Foundation provides support for the Apache community of
-open-source software http://www.apache.org/foundation/projects.html[projects].
+open-source software https://www.apache.org/index.html#projects-list[projects].
 The Apache projects are characterized by a collaborative, consensus based
 development process, an open and pragmatic software
-http://www.apache.org/foundation/license-FAQ.html[license], and a desire to create high quality software that leads the way in its field.
+http://www.apache.org/licenses[license], and a desire to create high quality software that leads the way in its field.
 
 == More Information
 

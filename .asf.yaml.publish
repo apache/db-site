@@ -3,4 +3,3 @@
 # This file is only used on the site publishing branch
 publish:
   whoami:  publish
-  subdir:  content/db-is-this-correct

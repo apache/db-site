@@ -2,7 +2,7 @@ This is not live yet.
 To look at the website:
 * check it out locally
 * run `mvn clean compile`
-* open `db-site\target\site\index.html` in your favorite web browser.
+* in your checked out workspace, open the file `db-site\target\site\index.html` in your favorite web browser.
 
 # TODO
 * Fix .htaccess -> `RewriteBase`
