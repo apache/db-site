@@ -1,6 +1,6 @@
 This is not live yet.
 To look at the website:
-* check it out locally
+* check it out locally: git clone https://github.com/apache/db-site.git
 * run `mvn clean compile`
 * in your checked out workspace, open the file `db-site\target\site\index.html` in your favorite web browser.
 
