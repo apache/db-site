@@ -45,7 +45,7 @@ others can also learn from common mistakes and as a community we all grow togeth
 
   |Brian McCallister |brianm |brianm@apache.org |The Apache Software Foundation |PMC Member
 
-  |Camilla B. Haase |chaase3 |chaase@apache.org |The Apache Software Foundation |PMC Member
+  |Camilla B. Haase |chaase3 |chaase3@apache.org |The Apache Software Foundation |PMC Member
 
   |Craig Russell |clr |clr@apache.org |The Apache Software Foundation |PMC Member, JDO
 
