@@ -11,7 +11,7 @@ To look at the website:
 * Enable/use Actions
   * Recreate-site-branch
 * Anything else?
-* 
+* Ask for a review of the main page for required Apache links
 * Proof reading
 
 
