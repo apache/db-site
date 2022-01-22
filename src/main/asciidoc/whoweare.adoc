@@ -33,7 +33,7 @@ others can also learn from common mistakes and as a community we all grow togeth
 
   |Army Brown  |abrown |abrown@apache.org |The Apache Software Foundation |PMC Member
 
-  |Andy Jefferson |andyj |andyj@apache.org |The Apache Software Foundation |PMC Member
+  |Andy Jefferson |andyj |andyj@apache.org |The Apache Software Foundation |PMC Member, JDO
 
   |Armin Waibel |arminw |arminw@apache.org |The Apache Software Foundation |PMC Member
 
@@ -62,6 +62,8 @@ others can also learn from common mistakes and as a community we all grow togeth
   |Andrew McIntyre |fuzzylogic |fuzzylogic@apache.org |The Apache Software Foundation |PMC Member, Derby
 
   |Geir Magnusson |geirm |geirm@apache.org |The Apache Software Foundation |PMC Member
+
+  |Georg Kallidis |gk | gk@apache.org |The Apache Software Foundation |PMC Member
 
   |Greg Monroe |gmonroe |gmonroe@apache.org |The Apache Software Foundation |PMC Member
 
@@ -93,9 +95,13 @@ others can also learn from common mistakes and as a community we all grow togeth
 
   |Øystein Grøvlen |oysteing |oysteing@apache.org |The Apache Software Foundation |PMC Member
 
+  |Jeffery Painter |painter | painter@apache.org |The Apache Software Foundation |PMC Member
+
   |Rick Hillegas |rhillegas |rhillegas@apache.org |The Apache Software Foundation |PMC Member, Derby
 
   |Rodney Waldhoff |rwaldhoff |rwaldhoff@apache.org |The Apache Software Foundation |PMC Member
+
+  |Laura Stewart |scotsmatrix |scotsmatrix@apache.org |The Apache Software Foundation |PMC Member
 
   |Scott Eade |seade |seade@apache.org |The Apache Software Foundation |PMC Member
 
@@ -107,127 +113,27 @@ others can also learn from common mistakes and as a community we all grow togeth
 
   |Tiago Espinha |tiago |tiago@apache.org |The Apache Software Foundation |PMC Member, Derby
 
+  |Tilmann Zäschke |tilmannz |tilmannz@apache.org |The Apache Software Foundation |PMC Member, JDO
+
   |Tomohito Nakayama |tmnk |tmnk@apache.org |The Apache Software Foundation |PMC Member, Derby
 
   |Thomas Dudziak |tomdz |tomdz@apache.org |The Apache Software Foundation |PMC Member
 
-  |Thomas Vandahl |tv |tv@apache.org |The Apache Software Foundation |PMC Member, Torque</td>
+  |Thomas Vandahl |tv |tv@apache.org |The Apache Software Foundation |PMC Member, Torque
 
 |===
 
 
 == Committers
 
+All DB PMC member listed above are DB commiters, plus the following Apache committers:
+
 [cols=",,,,",options="header",]
 |===
 |Name |Id |Email |Organization |Roles
 
+  |Brett Bergquist |bbergquist |bbergquist@apache.org | |
 
-  |Army Brown |abrown |abrown@apache.org |The Apache Software Foundation |PMC Member
+  |Tobias Bouschen |tobous |tobous@apache.org | |
 
-  |Armin Waibel |arminw |arminw@apache.org | |
-
-  |Oyvind Bakksjo |bakksjo | | |Java Developer
-
-  |Leandro Rodrigo Saad Cruz |baserose |leandro@ibnetwork.com.br |Inter Business Tecnologia e Servicos |
-
-  |Bernt M. Johnsen |bernt |bernt.johnsen@oracle.com |Oracle |Java Developer
-
-  |Bryan Pendleton |bpendleton |bpendleton@apache.org | |Java Developer
-
-  |Michael Watzek |brazil |mwa.tech@spree.de |Tech@Spree Engineering GmbH |
-
-  |Jeffrey D. Brekke |brekke |brekke@apache.org | |Java Developer
-
-  |Brian McCallister |brianm |brianm@apache.org | |
-
-  |Jakob Braeuchi |brj |jbraeuchi@gmx.ch | |
-
-  |Craig Russell |clr |Craig.Russell@Oracle.COM |Oracle |
-
-  |Dag Wanvik |dag |dag@apache.org |Oracle |Derby
-
-  |David Van Couvering |davidvc |davidvc@apache.org | |Derby
-
-  |Dan Debrunner |djd |djd@debrunners.com |IBM |Derby
-
-  |Daniel Rall |dlr |dlr@finemaltcoding.com |CollabNet, Inc. |Java Developer
-
-  |Eric Dobbs |dobbs |dobbs@apache.org | |Java Developer
-
-  |Erik Bengtson |ebengtson |erik@jpox.org | |
-
-  |Fedor Karpelevitch |fedor |fedor@karpelevitch.net | |Java Developer
-
-  |Andrew McIntyre |fuzzylogic |fuzzylogic@apache.org | |Derby Developer
-
-  |Geir Magnusson, Jr. |geirm |geirm@apache.org |Apache.org |
-
-  |Henning P. Schmiedehausen |henning |hps@intermeta.de |INTERMETA - Gesellschaft fuer Mehrwertdienste mbH |Java Developer
-
-  |Humberto Hernandez |hhernandez |hhernandez@itweb.com.mx |Integrated Technology S.C. |Java Developer
-
-  |Jeremy Boynes |jboynes |jboynes@apache.org | |
-
-  |John McNally |jmcnally |jmcnally@collab.net |CollabNet |Java Developer
-
-  |Jon Scott Stevens |jon |jon@latchkey.com |CollabNet, Inc. |Java Developer
-
-  |Jorgen Loland |jorgenlo |jorgenlo@apache.org |Oracle |Derby
-
-  |Jean T. Anderson |jta |jta@bristowhill.com | |Derby, Web site
-
-  |James Taylor |jtaylor |james@jamestaylor.org | |Java Developer
-
-  |Jason van Zyl |jvanzyl |jason@zenplex.com |Zenplex |
-
-  |Knut Anders Hatlen |kahatlen |kahatlen@apache.org |Oracle |Derby
-
-  |Kathey Marsden |kmarsden |kmarsdenderby@sbcglobal.net |IBM |Derby Developer
-
-  |Kurt Schrader |kschrader |kschrader@karmalab.org | |Java Developer
-
-  |Lily Wei |lilywei |lilywei@apache.org | |Derby
-
-  |Mamta |mamta |mamta@apache.org |IBM |Derby
-
-  |Matthew Adams |madams |matthew.adams@xcalia.com |Xcalia |
-
-  |Matthew Baird |mattbaird |mattbaird@yahoo.com |Motiva |
-
-  |Michael Bouschen |mbo |mbo.tech@spree.de |Tech@Spree Engineering GmbH |
-
-  |Michelle Caisse |mcaisse | | |
-
-  |Mike Matrigali |mikem |mikem_app@sbcglobal.net |IBM |Derby Developer
-
-  |Martin Poeschl |mpoeschl |mpoeschl@marmot.at |Tucana.at |Java Developer
-
-  |Martin Zaun |mzaun |martin.zaun@Oracle.COM |Oracle |
-
-  |Myrna van Lunteren |myrnavl |myrnavl@apache.org |IBM |Derby
-
-  |Oleg Nitz |olegnitz |on@ukr.net |IBIS.ua |
-
-  |Quinton McCombs |quintonm |quintonm@bellsouth.net |NEqualsOne |Java Developer
-
-  |Raghuram Rajah |raghu |raghuram.rajah@s1.com | |
-
-  |Rick Hillegas |rhillegas |rhillegas@apache.org |Oracle |Derby
-
-  |Scott Eade |seade |seade@backstagetech.com.au |Backstage Technologies Pty. Ltd. |Java Developer
-
-  |Stephen Haberman |stephenh |stephenh@chase3000.com | |Java Developer
-
-  |Suresh Thalamati |suresht |suresht@apache.org |IBM |Derby
-
-  |Thomas Fischer |tfischer |fischer@seitenbau.de |Seitenbau GmbH |Java Developer
-
-  |Thomas Mahler |thma |thma@apache.org |ITellium Systems and Services GmbH |
-
-  |Thomas Vandahl |tv |tv@apache.org | |Torque Developer
-
-  |Tiago Espinha |tiago |tiago@apache.org | |Derby
-
-  |Tomohito Nakayama |tmnk |tomonaka@basil.ocn.ne.jp | |Java Developer
 |===
