@@ -1,0 +1,27 @@
+:_basedir:
+:_imagesdir: images/
+:grid: cols
+:notoc:
+:notitle:
+:metadata:
+
+[[index]]
+
+
+= Sitemap
+
+== Sitemap
+
+   * link:index.html[Welcome]
+   * link:communication.html[Communication]
+   * link:contact.html[Contact us!]
+   * link:decisions.html[Decision Making]
+   * link:guidelines.html[Project Guidelines]
+   * link:mail.html[Mailing Lists]
+   * link:management.html[PMC Bylaws]
+   * link:newproject.html[Subproject Proposals]
+   * link:roles.html[Roles and Responsibilities]
+   * link:source-repos.html[Source Repositories]
+   * link:source.html[Organization of Source Repositories]
+   * link:whoweare.html[Who We Are]
+
