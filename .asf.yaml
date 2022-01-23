@@ -36,6 +36,6 @@ github:
       allow_force_pushes: true
 
 notifications:
-  commits:      jdo-commits@db.apache.org
-  issues:       jdo-dev@db.apache.org
-  pullrequests: jdo-dev@db.apache.org
+  commits:      notifications@db.apache.org
+  issues:       general@db.apache.org
+  pullrequests: general@db.apache.org
