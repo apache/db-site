@@ -17,7 +17,7 @@ image:images/db-logo-blue.png[float="right"]
 
 DB is a Project of the
 xref:Apache_Software_Foundation[Apache Software Foundation], charged with the
-creation and maintenance of commercial-quality, open-source, database solutions
+creation and maintenance of commercial-quality open-source database solutions
 based on software licensed to the Foundation, for distribution at no charge to
 the public.
 
