@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- No caching headers -->
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="expires" content="-1"/>
+    <meta name="keywords" content="DB, Derby, JDO, Torque, Apache"/>
+    <meta name="description" content="Apache DB"/>
+
+    <title>Subproject Proposals</title>
+
+    <link rel="icon" type="image/png" href="images/db-logo-white.png"/>
+
+    <!--
+        Apache DB Documentation Template
+        ==================================
+        This template derived various aspects from Apache Deltaspike template, the Apache ISIS template and the Datanucleus template.
+        This template uses 
+        * Bootstrap v3.3.7 (https://getbootstrap.com/) for navbar.
+        * Asciidoctor "foundation" CSS
+        * Bootswatch "cosmo" theme for Bootstrap (https://bootswatch.com/cosmo).
+        * Bootstrap TOC plugin v0.4.1 (https://afeld.github.io/bootstrap-toc/) for the table of contents.
+        * jQuery (necessary for Bootstrap's JavaScript plugins)
+        * Font-Awesome for some icons used by Asciidoctor
+        NOTE: tried using Font-Awesome CSS hosted locally but then fails to work!
+    -->
+    <link href="css/bootswatch/3.3.7/bootstrap-cosmo.css" rel="stylesheet"/>
+    <link href="css/bootstrap-toc/0.4.1/bootstrap-toc.min.css" rel="stylesheet"/>
+
+    <link href="css/asciidoctor/foundation.css" rel="stylesheet"/>
+    <link href="css/datanucleus_theme.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    
+    
+     
+
+    
+
+    
+    
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap/3.3.7/bootstrap.min.js"></script>
+    <script src="js/bootstrap-toc/0.4.1/bootstrap-toc.min.js"></script>
+
+    <!-- Coderay syntax formatter -->
+    <style type="text/css">
+        /* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+pre.CodeRay{background:#f7f7f8}
+.CodeRay .line-numbers{border-right:1px solid currentColor;opacity:.35;padding:0 .5em 0 0}
+.CodeRay span.line-numbers{display:inline-block;margin-right:.75em}
+.CodeRay .line-numbers strong{color:#000}
+table.CodeRay{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.CodeRay td{vertical-align:top;line-height:inherit}
+table.CodeRay td.line-numbers{text-align:right}
+table.CodeRay td.code{padding:0 0 0 .75em}
+.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .annotation{color:#007}
+.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-value{color:#700}
+.CodeRay .binary{color:#509}
+.CodeRay .comment{color:#998;font-style:italic}
+.CodeRay .char{color:#04d}
+.CodeRay .char .content{color:#04d}
+.CodeRay .char .delimiter{color:#039}
+.CodeRay .class{color:#458;font-weight:bold}
+.CodeRay .complex{color:#a08}
+.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .color{color:#099}
+.CodeRay .class-variable{color:#369}
+.CodeRay .decorator{color:#b0b}
+.CodeRay .definition{color:#099}
+.CodeRay .delimiter{color:#000}
+.CodeRay .doc{color:#970}
+.CodeRay .doctype{color:#34b}
+.CodeRay .doc-string{color:#d42}
+.CodeRay .escape{color:#666}
+.CodeRay .entity{color:#800}
+.CodeRay .error{color:#808}
+.CodeRay .exception{color:inherit}
+.CodeRay .filename{color:#099}
+.CodeRay .function{color:#900;font-weight:bold}
+.CodeRay .global-variable{color:#008080}
+.CodeRay .hex{color:#058}
+.CodeRay .integer,.CodeRay .float{color:#099}
+.CodeRay .include{color:#555}
+.CodeRay .inline{color:#000}
+.CodeRay .inline .inline{background:#ccc}
+.CodeRay .inline .inline .inline{background:#bbb}
+.CodeRay .inline .inline-delimiter{color:#d14}
+.CodeRay .inline-delimiter{color:#d14}
+.CodeRay .important{color:#555;font-weight:bold}
+.CodeRay .interpreted{color:#b2b}
+.CodeRay .instance-variable{color:#008080}
+.CodeRay .label{color:#970}
+.CodeRay .local-variable{color:#963}
+.CodeRay .octal{color:#40e}
+.CodeRay .predefined{color:#369}
+.CodeRay .preprocessor{color:#579}
+.CodeRay .pseudo-class{color:#555}
+.CodeRay .directive{font-weight:bold}
+.CodeRay .type{font-weight:bold}
+.CodeRay .predefined-type{color:inherit}
+.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .key{color:#808}
+.CodeRay .key .delimiter{color:#606}
+.CodeRay .key .char{color:#80f}
+.CodeRay .value{color:#088}
+.CodeRay .regexp .delimiter{color:#808}
+.CodeRay .regexp .content{color:#808}
+.CodeRay .regexp .modifier{color:#808}
+.CodeRay .regexp .char{color:#d14}
+.CodeRay .regexp .function{color:#404;font-weight:bold}
+.CodeRay .string{color:#d20}
+.CodeRay .string .string .string{background:#ffd0d0}
+.CodeRay .string .content{color:#d14}
+.CodeRay .string .char{color:#d14}
+.CodeRay .string .delimiter{color:#d14}
+.CodeRay .shell{color:#d14}
+.CodeRay .shell .delimiter{color:#d14}
+.CodeRay .symbol{color:#990073}
+.CodeRay .symbol .content{color:#a60}
+.CodeRay .symbol .delimiter{color:#630}
+.CodeRay .tag{color:#008080}
+.CodeRay .tag-special{color:#d70}
+.CodeRay .variable{color:#036}
+.CodeRay .insert{background:#afa}
+.CodeRay .delete{background:#faa}
+.CodeRay .change{color:#aaf;background:#007}
+.CodeRay .head{color:#f8f;background:#505}
+.CodeRay .insert .insert{color:#080}
+.CodeRay .delete .delete{color:#800}
+.CodeRay .change .change{color:#66f}
+.CodeRay .head .head{color:#f4f}
+    </style>
+</head>
+<body data-spy="scroll" data-target="#toc">
+<!-- Navbar -->
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <!-- Three line menu button for use on mobile screens -->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- 'style' added to align image with navbar. FIX THIS -->
+            <a class="navbar-brand" href="https://db.apache.org/">
+                <!-- img style="margin-top: -12px;" alt="Brand" width="405.5" height="45.5" src="images/db-logo-blue.png"/ -->
+                <img style="margin-top: -12px;" alt="Brand" width="250" height="45.5" src="images/db-logo-white.png"/>
+            </a>
+            <!-- TODO Any way to abstract the version from Maven? -->
+            <!-- a class="navbar-brand" href="index.html">Apache DB</a -->
+        </div>
+        <!-- Navbar that will collapse on mobile screens -->
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+
+                  <!-- menu item General -->
+
+                  
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">General<span class="caret"></span></a>
+                  
+                  <ul class="dropdown-menu">
+                        <li><a href="index.html">About / News</a></li>
+                        <li><a href="http://www.apache.org/licenses/LICENSE-2.0">License</a></li>
+                        <li><a href="mail.html">Mailing Lists</a></li>
+                        <li><a href="whoweare.html">Who We Are</a></li>
+                        <li><a href="source-repos.html">Source Repositories</a></li>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                    </ul>
+                </li>
+
+                <!-- menu item Subprojects -->
+
+                <li class="dropdown">
+                  
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Subprojects<span class="caret"></span></a>
+                  
+                    <ul class="dropdown-menu">
+                        <li><a href="https://db.apache.org/derby/">Derby</a></li>
+                        <li><a href="https://db.apache.org/jdo/">JDO</a></li>
+                        <li><a href="https://db.apache.org/torque/">Torque</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li>&nbsp Retired Subprojects</li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="https://db.apache.org/ddlutils/">DdlUtils</a></li>
+                        <li><a href="http://attic.apache.org/projects/ojb.html">ObJectRelationalBridge</a></li>
+                    </ul>
+                </li>
+
+                <!-- menu item The Foundation -->
+
+                <li class="dropdown">
+                  
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">The Foundation<span class="caret"></span></a>
+                  
+                    <ul class="dropdown-menu">
+                        <li><a href="https://www.apache.org">Apache</a></li>
+                        <li><a href="https://www.apache.org/foundation/thanks.html">Thanks</a></li>
+                        <li><a href="https://www.apache.org/foundation/sponsorship.html">Donate</a></li>
+                        <li><a href="https://www.apache.org/security">Security</a></li>
+                        <li><a href="https://www.apache.org/foundation/how-it-works.html">How It Works</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+           <!-- 'style' added to fix height of input box. FIX THIS -->
+            <form class="navbar-form navbar-left" role="search" id="search-form" action="https://www.google.com/search" method="get" style="padding: 1px 15px;">
+                <div class="form-group">
+                    <input name="sitesearch" value="db.apache.org" type="hidden">
+                    <input name="q" type="text" class="form-control" placeholder="Search" style="margin-top: 7px; padding: 1px; border-radius: 5px; height: 30px; vertical-align: middle;">
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    
+        <!-- No TOC -->
+        <div class="row-fluid">
+            <div class="col-sm-12">
+                
+                    <!-- no heading -->
+                
+                <div id="doc-content">
+                    <div class="sect1">
+<h2 id="_subproject_proposals">Subproject Proposals</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Not every software product is suited for life at DB. Before proposing a new
+subproject, it is important to read this document carefully and determine
+whether your product is a good fit.</p>
+</div>
+<div class="sect2">
+<h3 id="_criteria">Criteria</h3>
+<div class="paragraph">
+<p>Here are some best practices that we will expect to find in a successful
+proposal. This is not a checklist, but guidelines to help communicate what is
+expected of a DB subproject.</p>
+</div>
+<div class="paragraph">
+<p><strong>Meritocracy</strong>.
+Before submitting a proposal, be sure to study the guidelines that
+<a href="guidelines.html">govern DB subprojects</a>. These guidelines explain our system
+of Meritocracy, which is the core of the DB Project. If the product
+developers do not wish to adopt this system, then they should <strong>not</strong> donate
+their code to the Project, and should look elsewhere for hosting.</p>
+</div>
+<div class="paragraph">
+<p><strong>Community</strong>.
+DB is a Project of the <a href="http://www.apache.org/">Apache Software Foundation</a>.
+A prime purpose of the ASF is to ensure that the Apache projects continue to
+exist beyond the participation of individual volunteers. Accordingly, a prime
+criteria required of any new subproject is that it already enjoys&#8201;&#8212;&#8201;or has a
+high potential for attracting&#8201;&#8212;&#8201;an active community of developers and users.</p>
+</div>
+<div class="paragraph">
+<p>Proposals for non-established products have been accepted, most often when
+the proposal was tendered by experienced open source developers, who
+understand what it means to build a community.</p>
+</div>
+<div class="paragraph">
+<p>A design document, developer and user documentation, example code, and a
+working implementation all help to increase the likelihood of acceptance.
+Well-documented products tend to build stronger communities than products
+that rely source code and JavaDocs alone.</p>
+</div>
+<div class="paragraph">
+<p><strong>Core Developers</strong>.
+To considered, a product must have at least 3 active developers who are
+already involved with the codebase. This is an absolute minimum, and it is
+helpful for there to more than three developers. It is <strong>very</strong> helpful for
+at least one of the developers making the proposal to already be active in a
+DB subproject or other open source initiative.</p>
+</div>
+<div class="paragraph">
+<p>At DB, the core developers of a product (the <a href="roles.html">Committers</a>) manage
+the codebases and make the day-to-day development decisions. We are only
+interested in products that can guided by their own development communities.
+DB provides the infrastructure, and some essential guidelines, but the
+Committers must take responsibility for developing and releasing their own
+product.</p>
+</div>
+<div class="paragraph">
+<p><strong>Alignment with existing Apache subprojects</strong>.
+Products that are already used by existing subprojects make attractive
+candidates, since bringing such a codebase into the Apache fold tends to
+benefit both communities. Products with dependencies on existing Apache
+products are also attractive for the same reason.</p>
+</div>
+<div class="paragraph">
+<p><strong>Scope</strong>.
+DB products are generally server-side software solutions written for the Java
+platform. Proposals for products outside this venue will have greater
+difficulty in being accepted.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_warning_signs">Warning Signs</h3>
+<div class="paragraph">
+<p>These are anti-patterns that we have found detrimental to the success of a
+proposal. Some of these are lesson learned from the school of hard-knocks,
+others are taken from proposals which have been rejected in the past. All
+will raise a red flag, making it unlikely that a proposal will be accepted.</p>
+</div>
+<div class="paragraph">
+<p><strong>Orphaned products</strong>.
+Products which have lost their corporate sponsor (for whatever reason) do
+<strong>not</strong> make good candidates. These products will lack a development
+community and won&#8217;t have the support needed to succeed under the DB umbrella.</p>
+</div>
+<div class="paragraph">
+<p>For example, we have seen proposals that contain paragraphs like this:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>FooProduct is currently a production quality product, and in
+fact is being used by a live website. It was developed as a
+product by FooCompany, with the intention that we would sell
+it. However, due to various economic factors such as the
+decline in FooProduct's intended market and the
+recent difficulties in obtaining venture capital, we have
+decided that at this time it is not feasible for us to
+continue in that direction.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The alleged quality of a product is not the prime criteria. To be accepted,
+we must believe that a product will attract volunteers to extend and maintain
+it over the long term. A product like this, arriving with no volunteer
+developers or open source community, does not further
+<a href="index.html#DB_Mission">DB&#8217;s mission</a>, and would not be accepted.</p>
+</div>
+<div class="paragraph">
+<p>We generally recommend that an orphaned product start with an independent
+host, and consider making a proposal after it has started to build a
+community.</p>
+</div>
+<div class="paragraph">
+<p><strong>Inexperience with open source</strong>.
+We often receive proposals that start with "We will open our software if you
+choose to accept it." This is the wrong way to approach the proposal process.
+A closed source project does not have an open community, and so we have no
+way to tell if the developers can work in an open source environment.
+Products that have lived on their own and have started to develop their own
+community, have a much better chance of being accepted.</p>
+</div>
+<div class="paragraph">
+<p>If the product&#8217;s developers have not worked with open source before, it is
+recommended that they spend some time contributing to an existing open source
+project before trying to manage one of their own. Since DB subprojects are
+managed by their own Committers, it is important that a new product supported
+by people who understand how open source works.</p>
+</div>
+<div class="paragraph">
+<p><strong>Homogenous developers</strong>.
+Apache communities attract developers with diverse backgrounds. Products with
+a tightly-knit team of developers may have difficulty shepherding new
+developers into the fold. It is vital that we believe the developers will
+discuss development issues openly with the community, and <strong>not</strong> make
+decisions behind closed doors. We are especially wary of products with
+developers who all share a common employer or geographic location.</p>
+</div>
+<div class="paragraph">
+<p><strong>Reliance on salaried developers</strong>.
+DB has strong ties to the business community. Many of our developers are
+encouraged by their employers to work open source projects as part of their
+regular job. We feel that this is a Good Thing, and corporations should be
+entitled to contribute to open source, same as anyone else. However, we are
+wary of products which rely strongly on developers who only work on open
+source products when they are paid to do so. A product at DB must continue to
+exist beyond the participation of individual volunteers. We believe the best
+indicator of success is when developers volunteer their own time to work open
+source projects.</p>
+</div>
+<div class="paragraph">
+<p><strong>No ties to other Apache products</strong>.
+Products <strong>without</strong> a tie to any existing Apache product, and that have
+strong dependencies on alternatives to Apache products, do not make good
+candidates. Many Apache products are related through common licenses,
+technologies, and through their volunteers. Products without licensing,
+technology, or volunteers in common will have trouble attracting a strong
+community.</p>
+</div>
+<div class="paragraph">
+<p><strong>A fascination with the Apache brand</strong>. The
+<a href="http://www.apache.org/licenses/">Apache Software License</a> is quite liberal
+and allows for the code to used in commercial products. This can induce
+people to donate a commercial codebase to the ASF, allow it developed as open
+source for a time, and then convert it back to commercial use. While this
+would legal under the Apache Software License, we are wary of proposals that
+seem to be more interested in exposure than community.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_subproject_alternatives">Subproject Alternatives</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_who_decides">Who Decides</h3>
+<div class="paragraph">
+<p>Final acceptance is based the rules defined in the
+<a href="management.html">Project Management Committee Bylaws</a> which state that
+"Creation of a new subproject requires approval by 3/4 vote of the PMC." The
+proposal for a new subproject must submitted to the DB General
+<a href="mail.html">mailing list</a>, where the PMC conducts business.  All discussion
+regarding the proposal will occur the General list, including the final vote.</p>
+</div>
+</div>
+</div>
+</div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+  <footer style="color:#fff; background-color:#222222; padding: 5px;">
+  <div class="container">
+      <p class="text-center" style="margin-top:16px">Copyright &copy; 2005-2022 Apache Software Foundation, Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" title="Apache License">Apache License, Version 2.0.</a></p>
+      <p class="text-center" style="margin-top:16px">Apache, Apache DB, Apache Derby, Apache Torque, Apache JDO, Apache DDLUtils, the Derby hat logo, the Apache JDO logo, and the Apache feather logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners.</p>
+  </div>
+  </footer>
+
+</body>
+</html>

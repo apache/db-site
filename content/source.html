@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- No caching headers -->
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="expires" content="-1"/>
+    <meta name="keywords" content="DB, Derby, JDO, Torque, Apache"/>
+    <meta name="description" content="Apache DB"/>
+
+    <title>Organization of Source Repositories</title>
+
+    <link rel="icon" type="image/png" href="images/db-logo-white.png"/>
+
+    <!--
+        Apache DB Documentation Template
+        ==================================
+        This template derived various aspects from Apache Deltaspike template, the Apache ISIS template and the Datanucleus template.
+        This template uses 
+        * Bootstrap v3.3.7 (https://getbootstrap.com/) for navbar.
+        * Asciidoctor "foundation" CSS
+        * Bootswatch "cosmo" theme for Bootstrap (https://bootswatch.com/cosmo).
+        * Bootstrap TOC plugin v0.4.1 (https://afeld.github.io/bootstrap-toc/) for the table of contents.
+        * jQuery (necessary for Bootstrap's JavaScript plugins)
+        * Font-Awesome for some icons used by Asciidoctor
+        NOTE: tried using Font-Awesome CSS hosted locally but then fails to work!
+    -->
+    <link href="css/bootswatch/3.3.7/bootstrap-cosmo.css" rel="stylesheet"/>
+    <link href="css/bootstrap-toc/0.4.1/bootstrap-toc.min.css" rel="stylesheet"/>
+
+    <link href="css/asciidoctor/foundation.css" rel="stylesheet"/>
+    <link href="css/datanucleus_theme.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    
+    
+     
+
+    
+
+    
+    
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap/3.3.7/bootstrap.min.js"></script>
+    <script src="js/bootstrap-toc/0.4.1/bootstrap-toc.min.js"></script>
+
+    <!-- Coderay syntax formatter -->
+    <style type="text/css">
+        /* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+pre.CodeRay{background:#f7f7f8}
+.CodeRay .line-numbers{border-right:1px solid currentColor;opacity:.35;padding:0 .5em 0 0}
+.CodeRay span.line-numbers{display:inline-block;margin-right:.75em}
+.CodeRay .line-numbers strong{color:#000}
+table.CodeRay{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.CodeRay td{vertical-align:top;line-height:inherit}
+table.CodeRay td.line-numbers{text-align:right}
+table.CodeRay td.code{padding:0 0 0 .75em}
+.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .annotation{color:#007}
+.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-value{color:#700}
+.CodeRay .binary{color:#509}
+.CodeRay .comment{color:#998;font-style:italic}
+.CodeRay .char{color:#04d}
+.CodeRay .char .content{color:#04d}
+.CodeRay .char .delimiter{color:#039}
+.CodeRay .class{color:#458;font-weight:bold}
+.CodeRay .complex{color:#a08}
+.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .color{color:#099}
+.CodeRay .class-variable{color:#369}
+.CodeRay .decorator{color:#b0b}
+.CodeRay .definition{color:#099}
+.CodeRay .delimiter{color:#000}
+.CodeRay .doc{color:#970}
+.CodeRay .doctype{color:#34b}
+.CodeRay .doc-string{color:#d42}
+.CodeRay .escape{color:#666}
+.CodeRay .entity{color:#800}
+.CodeRay .error{color:#808}
+.CodeRay .exception{color:inherit}
+.CodeRay .filename{color:#099}
+.CodeRay .function{color:#900;font-weight:bold}
+.CodeRay .global-variable{color:#008080}
+.CodeRay .hex{color:#058}
+.CodeRay .integer,.CodeRay .float{color:#099}
+.CodeRay .include{color:#555}
+.CodeRay .inline{color:#000}
+.CodeRay .inline .inline{background:#ccc}
+.CodeRay .inline .inline .inline{background:#bbb}
+.CodeRay .inline .inline-delimiter{color:#d14}
+.CodeRay .inline-delimiter{color:#d14}
+.CodeRay .important{color:#555;font-weight:bold}
+.CodeRay .interpreted{color:#b2b}
+.CodeRay .instance-variable{color:#008080}
+.CodeRay .label{color:#970}
+.CodeRay .local-variable{color:#963}
+.CodeRay .octal{color:#40e}
+.CodeRay .predefined{color:#369}
+.CodeRay .preprocessor{color:#579}
+.CodeRay .pseudo-class{color:#555}
+.CodeRay .directive{font-weight:bold}
+.CodeRay .type{font-weight:bold}
+.CodeRay .predefined-type{color:inherit}
+.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .key{color:#808}
+.CodeRay .key .delimiter{color:#606}
+.CodeRay .key .char{color:#80f}
+.CodeRay .value{color:#088}
+.CodeRay .regexp .delimiter{color:#808}
+.CodeRay .regexp .content{color:#808}
+.CodeRay .regexp .modifier{color:#808}
+.CodeRay .regexp .char{color:#d14}
+.CodeRay .regexp .function{color:#404;font-weight:bold}
+.CodeRay .string{color:#d20}
+.CodeRay .string .string .string{background:#ffd0d0}
+.CodeRay .string .content{color:#d14}
+.CodeRay .string .char{color:#d14}
+.CodeRay .string .delimiter{color:#d14}
+.CodeRay .shell{color:#d14}
+.CodeRay .shell .delimiter{color:#d14}
+.CodeRay .symbol{color:#990073}
+.CodeRay .symbol .content{color:#a60}
+.CodeRay .symbol .delimiter{color:#630}
+.CodeRay .tag{color:#008080}
+.CodeRay .tag-special{color:#d70}
+.CodeRay .variable{color:#036}
+.CodeRay .insert{background:#afa}
+.CodeRay .delete{background:#faa}
+.CodeRay .change{color:#aaf;background:#007}
+.CodeRay .head{color:#f8f;background:#505}
+.CodeRay .insert .insert{color:#080}
+.CodeRay .delete .delete{color:#800}
+.CodeRay .change .change{color:#66f}
+.CodeRay .head .head{color:#f4f}
+    </style>
+</head>
+<body data-spy="scroll" data-target="#toc">
+<!-- Navbar -->
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <!-- Three line menu button for use on mobile screens -->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- 'style' added to align image with navbar. FIX THIS -->
+            <a class="navbar-brand" href="https://db.apache.org/">
+                <!-- img style="margin-top: -12px;" alt="Brand" width="405.5" height="45.5" src="images/db-logo-blue.png"/ -->
+                <img style="margin-top: -12px;" alt="Brand" width="250" height="45.5" src="images/db-logo-white.png"/>
+            </a>
+            <!-- TODO Any way to abstract the version from Maven? -->
+            <!-- a class="navbar-brand" href="index.html">Apache DB</a -->
+        </div>
+        <!-- Navbar that will collapse on mobile screens -->
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+
+                  <!-- menu item General -->
+
+                  
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">General<span class="caret"></span></a>
+                  
+                  <ul class="dropdown-menu">
+                        <li><a href="index.html">About / News</a></li>
+                        <li><a href="http://www.apache.org/licenses/LICENSE-2.0">License</a></li>
+                        <li><a href="mail.html">Mailing Lists</a></li>
+                        <li><a href="whoweare.html">Who We Are</a></li>
+                        <li><a href="source-repos.html">Source Repositories</a></li>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                    </ul>
+                </li>
+
+                <!-- menu item Subprojects -->
+
+                <li class="dropdown">
+                  
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Subprojects<span class="caret"></span></a>
+                  
+                    <ul class="dropdown-menu">
+                        <li><a href="https://db.apache.org/derby/">Derby</a></li>
+                        <li><a href="https://db.apache.org/jdo/">JDO</a></li>
+                        <li><a href="https://db.apache.org/torque/">Torque</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li>&nbsp Retired Subprojects</li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="https://db.apache.org/ddlutils/">DdlUtils</a></li>
+                        <li><a href="http://attic.apache.org/projects/ojb.html">ObJectRelationalBridge</a></li>
+                    </ul>
+                </li>
+
+                <!-- menu item The Foundation -->
+
+                <li class="dropdown">
+                  
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">The Foundation<span class="caret"></span></a>
+                  
+                    <ul class="dropdown-menu">
+                        <li><a href="https://www.apache.org">Apache</a></li>
+                        <li><a href="https://www.apache.org/foundation/thanks.html">Thanks</a></li>
+                        <li><a href="https://www.apache.org/foundation/sponsorship.html">Donate</a></li>
+                        <li><a href="https://www.apache.org/security">Security</a></li>
+                        <li><a href="https://www.apache.org/foundation/how-it-works.html">How It Works</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+           <!-- 'style' added to fix height of input box. FIX THIS -->
+            <form class="navbar-form navbar-left" role="search" id="search-form" action="https://www.google.com/search" method="get" style="padding: 1px 15px;">
+                <div class="form-group">
+                    <input name="sitesearch" value="db.apache.org" type="hidden">
+                    <input name="q" type="text" class="form-control" placeholder="Search" style="margin-top: 7px; padding: 1px; border-radius: 5px; height: 30px; vertical-align: middle;">
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    
+        <!-- No TOC -->
+        <div class="row-fluid">
+            <div class="col-sm-12">
+                
+                    <!-- no heading -->
+                
+                <div id="doc-content">
+                    <div class="sect1">
+<h2 id="_organization_of_source_repositories">Organization of Source Repositories</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Project&#8217;s codebase is maintained in shared information repositories using
+Subversion. Only Committers have write access to these repositories. Everyone
+has anonymous read access.</p>
+</div>
+<div class="paragraph">
+<p>All Java Language source code in the repository must be written in
+conformance to the
+<a href="http://www.oracle.com/technetwork/java/codeconvtoc-136057.html">Code
+Conventions for the Java Programming Language</a> as published
+by Sun, or in conformance with another well-defined convention specified by
+the subproject.</p>
+</div>
+<div class="sect2">
+<h3 id="_license">License</h3>
+<div class="paragraph">
+<p>All source code committed to the Project&#8217;s repositories must be covered by
+the <a href="http://www.apache.org/foundation/licence-FAQ.html">Apache License</a> or
+contain a copyright and license that allows redistribution under the same
+conditions as the Apache License.</p>
+</div>
+<div class="paragraph">
+<p>Committers should update the copyright notice on the Apache License to
+include the current year when they revise a source file. If it is 2002, and
+you revise a source file from 1999, change the copyright notice in the
+license to cite "1999, 2002". If the file was from 2001, we would change it
+to 2001-2002. And so forth. This will happen most often in the early part of
+a year, but maintenance of the copyright date should occur year-round, as
+needed.</p>
+</div>
+<div class="paragraph">
+<p>Any code, document, or binary that is committed to the Project&#8217;s
+repositories, but not being donated to the ASF, must be clearly marked as
+such. All contributors should have a
+<a href="http://www.apache.org/licenses/#clas">Contributor License Agreement</a> on
+file.</p>
+</div>
+<div class="paragraph">
+<p>Any JAR committed to the Project&#8217;s repositories <strong>must</strong> be licensed for
+redistribution. BSD and MPL style licenses are generally fine, but many Sun
+JARs do not permit redistribution.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_status_files">Status Files</h3>
+<div class="paragraph">
+<p>Each of the Project&#8217;s active source code repositories contain a file named
+STATUS which is used to keep track of the agenda and plans for work within
+that repository. The status file includes information about release plans, a
+summary of code changes committed since the last release, a list of proposed
+changes that are under discussion, brief notes about items that individual
+developers are working on or want discussion about, and anything else that
+may be useful to help the group track progress.</p>
+</div>
+<div class="paragraph">
+<p>It is recommended that the active status files are automatically posted to
+the developer mailing lists three times per week.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_branches">Branches</h3>
+<div class="paragraph">
+<p>Groups are allowed to create a branch for release cycles, etc. They are
+expected to merge completely back with the main branch as soon as their
+release cycle is complete. All branches currently in use should be documented
+by the respective projects. For example,
+<a href="http://db.apache.org/derby/dev/derby_source.html#Branches">Derby</a> has a page
+on the site that details the branches currently in use.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_changes">Changes</h3>
+<div class="paragraph">
+<p>Simple patches to fix bugs can be committed then reviewed. With a
+commit-then-review process, the Committer is trusted to have a high degree of
+confidence in the change.</p>
+</div>
+<div class="paragraph">
+<p>Doubtful changes, new features, and large scale overhauls need to be
+discussed before committing them into the repository. Any change that affects
+the semantics of an existing API function, the size of the program,
+configuration data formats, or other major areas must receive consensus
+approval before being committed.</p>
+</div>
+<div class="paragraph">
+<p>Related changes should be committed as a group, or very closely together.
+Half complete projects should never be committed to the main branch of a
+development repository. All code changes must be successfully compiled on the
+developer&#8217;s platform before being committed. Also, any unit tests should also
+pass.</p>
+</div>
+<div class="paragraph">
+<p>The current source code tree for a subproject should be capable of complete
+compilation at all times. However, it is sometimes impossible for a developer
+on one platform to avoid breaking some other platform when a change is
+committed. If it is anticipated that a given change will break the build on
+some other platform, the committer must indicate that in the commit message.</p>
+</div>
+<div class="paragraph">
+<p>A committed change must be reversed if it is vetoed by one of the voting
+members and the veto conditions cannot be immediately satisfied by the
+equivalent of a "bug fix" commit. The veto must be rescinded before the
+change can be included in any public release.
+Patches</p>
+</div>
+<div class="paragraph">
+<p>When a specific change to a product is proposed for discussion or voting on
+the appropriate development mailing list, it should be presented in the form
+of input to the patch command. When sent to the mailing list, the message
+should contain a Subject beginning with [PATCH] and a distinctive one-line
+summary in the subject corresponding to the action item for that patch.</p>
+</div>
+<div class="paragraph">
+<p>The patch should be created by using the svn diff command from the original
+software file(s) to the modified software file(s). It is recommended that you
+submit patches against the latest Subversion versions of the software in
+order to avoid conflicts. This will also ensure that you are not submitting a
+patch for a problem that has already been resolved.</p>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>diff -u Main.java.orig Main.java &gt;&gt; patchfile.txt</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or (preferred)</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>svn diff Main.java &gt;&gt; patchfile.txt</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or (Win32)</p>
+</div>
+<div class="paragraph">
+<p>You can use a GUI front-end for <a href="http://subversion.apache.org/">Subversion</a>,
+or you can install <a href="http://www.cygwin.com">Cygwin</a> which will enable you to
+use the bash shell and also installs a lot of other utilities (such as diff
+and patch) that will turn your PC into a virtual Unix machine.</p>
+</div>
+<div class="paragraph">
+<p>All patches necessary to address an action item should be concatenated
+within a single patch message. If later modification to the patch proves
+necessary, the entire new patch should be posted and not just the difference
+between the two patches.</p>
+</div>
+<div class="paragraph">
+<p>If your email client line wraps the patch, consider placing the patch file up
+on a website and sending a message to the development list with the URL so
+that the developers with commit access can download the commit the patch file
+more easily. You can also add the patch as part of a bug report.</p>
+</div>
+<div class="paragraph">
+<p>When a patch has been checked into Subversion, the person who checked in the
+patch should send a message to the person who sent the patch in as well as
+the mailing list specifying that the patch has been checked in. The reason is
+that not everyone watches commit messages and it is helpful for others to
+know what has been checked in and when in order to help prevent people from
+applying the patch at the same time.</p>
+</div>
+</div>
+</div>
+</div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+  <footer style="color:#fff; background-color:#222222; padding: 5px;">
+  <div class="container">
+      <p class="text-center" style="margin-top:16px">Copyright &copy; 2005-2022 Apache Software Foundation, Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" title="Apache License">Apache License, Version 2.0.</a></p>
+      <p class="text-center" style="margin-top:16px">Apache, Apache DB, Apache Derby, Apache Torque, Apache JDO, Apache DDLUtils, the Derby hat logo, the Apache JDO logo, and the Apache feather logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners.</p>
+  </div>
+  </footer>
+
+</body>
+</html>
