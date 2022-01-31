@@ -1,20 +1,3 @@
-This is not live yet.
-To look at the website:
-* check it out locally: git clone https://github.com/apache/db-site.git
-* run `mvn clean compile`
-* in your checked out workspace, open the file `db-site\target\site\index.html` in your favorite web browser.
-
-# TODO
-* Fix .htaccess -> `RewriteBase`
-* Fix .asf.yaml.publish -> `subdir`
-* Fix .asf.yaml -> `notifications`
-* Enable/use Actions
-  * Recreate-site-branch
-* Anything else?
-* Ask for a review of the main page for required Apache links
-* Proof reading
-
-
 # Apache DB Website
 
 This repository contains the sources for the [Apache DB website](https://db.apache.org/).
@@ -26,14 +9,12 @@ It is built using [Maven](https://maven.apache.org/).
 For details on publishing the site see section [Publishing the Site](#publishing-the-site).
 
 The site can be built by calling `mvn clean compile`. This generates the HTML files in `target/site`.
-Most of the site will work with the exception of the javadoc file downloads.
-If needed, call `mvn package`. This copies the javadoc files to `target/site`.
 The site can then be viewed by opening the local file `target/site/index.html` in a browser.
 
 ## Contributing to the Site
 
 Contributions to the website are always appreciated.
-If you are new to this project, please have a look at our [mailing losts](https://db.apache.org/mail.html) page first.
+If you are new to this project, please have a look at our [mailing lists](https://db.apache.org/mail.html) page first.
 
 This repository contains the Apache DB website source.
 
