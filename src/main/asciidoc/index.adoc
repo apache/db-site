@@ -21,9 +21,9 @@ creation and maintenance of commercial-quality open-source database solutions
 based on software licensed to the Foundation, for distribution at no charge to
 the public.
 
+
 [#Apache_Software_Foundation]
 == Apache Software Foundation
-
 
 The Apache Software Foundation provides support for the Apache community of
 open-source software https://www.apache.org/index.html#projects-list[projects].
