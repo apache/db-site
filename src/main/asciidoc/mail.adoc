@@ -6,14 +6,11 @@
 :metadata:
 
 [[index]]
-
-
 = Mailing Lists
 
 == Mailing Lists
 
 Below are the major mailing lists used in the DB project.
-
 
 === General and Announcement Lists
 
@@ -22,14 +19,19 @@ The DB General Project List
 mailto:general-subscribe@db.apache.org[Subscribe] |
 mailto:general-unsubscribe@db.apache.org[Unsubscribe] |
 http://mail-archives.apache.org/mod_mbox/db-general/[Archive]
-  (http://www.mail-archive.com/general@db.apache.org/[alternative])
+(http://www.mail-archive.com/general@db.apache.org/[alternative])
 
-This is the project general mailing list. This is where ideas, suggestions,
-and comments are exchanged that deal with the overall DB project. Matters
-that affect the project as a whole are decided here. If you are interested in
-adding a new project to DB, please see link:newproject.html[this page].
+The DB General Notifications List
 
+mailto:notifications-subscribe@db.apache.org[Subscribe] |
+mailto:notifications-unsubscribe@db.apache.org[Unsubscribe] |
+http://mail-archives.apache.org/mod_mbox/db-general/[Archive]
+(http://www.mail-archive.com/notifications@db.apache.org/[alternative])
 
+This is the project general mailing list.
+This is where ideas, suggestions, and comments are exchanged that deal with the overall DB project.
+Matters that affect the project as a whole are decided here.
+If you are interested in adding a new project to DB, please see link:newproject.html[this page].
 
 === Derby Mailing Lists
 
@@ -38,22 +40,21 @@ Derby User List
 mailto:derby-user-subscribe@db.apache.org[Subscribe] |
 mailto:derby-user-unsubscribe@db.apache.org[Unsubscribe] |
 http://mail-archives.apache.org/mod_mbox/db-derby-user/[Archive]
-  (http://www.mail-archive.com/derby-user@db.apache.org/[alternative])
+(http://www.mail-archive.com/derby-user@db.apache.org/[alternative])
 
 Derby Developer List
 
 mailto:derby-dev-subscribe@db.apache.org[Subscribe] |
 mailto:derby-dev-unsubscribe@db.apache.org[Unsubscribe] |
 http://mail-archives.apache.org/mod_mbox/db-derby-dev/[Archive]
-  (http://www.mail-archive.com/derby-dev@db.apache.org/[alternative])
+(http://www.mail-archive.com/derby-dev@db.apache.org/[alternative])
 
 Derby Commits List
 
 mailto:derby-commits-subscribe@db.apache.org[Subscribe] |
 mailto:derby-commits-unsubscribe@db.apache.org[Unsubscribe] |
 http://mail-archives.apache.org/mod_mbox/db-derby-commits/[Archive]
-  (http://www.mail-archive.com/derby-commits@db.apache.org/[alternative])
-
+(http://www.mail-archive.com/derby-commits@db.apache.org/[alternative])
 
 === Java Data Objects (JDO) Mailing Lists
 
@@ -62,22 +63,21 @@ JDO User List
 mailto:jdo-user-subscribe@db.apache.org[Subscribe] |
 mailto:jdo-user-unsubscribe@db.apache.org[Unsubscribe] |
 http://mail-archives.apache.org/mod_mbox/db-jdo-user/[Archive]
-  (http://www.mail-archive.com/jdo-user@db.apache.org/[alternative])
+(http://www.mail-archive.com/jdo-user@db.apache.org/[alternative])
 
 JDO Developer List
 
 mailto:jdo-dev-subscribe@db.apache.org[Subscribe] |
 mailto:jdo-dev-unsubscribe@db.apache.org[Unsubscribe] |
 http://mail-archives.apache.org/mod_mbox/db-jdo-dev/[Archive]
-  (http://www.mail-archive.com/jdo-dev@db.apache.org/[alternative])
+(http://www.mail-archive.com/jdo-dev@db.apache.org/[alternative])
 
 JDO Commits List
 
 mailto:jdo-commits-subscribe@db.apache.org[Subscribe] |
 mailto:jdo-commits-unsubscribe@db.apache.org[Unsubscribe] |
 http://mail-archives.apache.org/mod_mbox/db-jdo-commits/[Archive]
-  (http://www.mail-archive.com/jdo-commits@db.apache.org/[alternative])
-
+(http://www.mail-archive.com/jdo-commits@db.apache.org/[alternative])
 
 === Torque Mailing Lists
 
@@ -86,11 +86,11 @@ Torque User List
 mailto:torque-user-subscribe@db.apache.org[Subscribe] |
 mailto:torque-user-unsubscribe@db.apache.org[Unsubscribe] |
 http://mail-archives.apache.org/mod_mbox/db-torque-user/[Archive]
-  (http://www.mail-archive.com/torque-user@db.apache.org/[alternative])
+(http://www.mail-archive.com/torque-user@db.apache.org/[alternative])
 
 Torque Developer List
 
 mailto:torque-dev-subscribe@db.apache.org[Subscribe] |
 mailto:torque-dev-unsubscribe@db.apache.org[Unsubscribe] |
 http://mail-archives.apache.org/mod_mbox/db-torque-dev/[Archive]
-  (http://www.mail-archive.com/torque-dev@db.apache.org/[alternative])
+(http://www.mail-archive.com/torque-dev@db.apache.org/[alternative])
