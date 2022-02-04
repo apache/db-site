@@ -22,7 +22,7 @@ attachments. It is recommended that you place interesting material (such
 as patches) either within the body of the message or provide a URL for
 retrieval.
 
-To join the mailing lists, see our link:mail.html[Mailing List] page.
+To join the mailing lists, see our xref:mail.adoc[Mailing List] page.
 
 The Project's list fall into the categories below.
 

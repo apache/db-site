@@ -17,7 +17,7 @@ Typical points of contact are listed below. Don't hesitate to get in touch if yo
 
 === Product Support
 
-If you have questions or comments about the software or documentation on this site, please subscribe to the appropriate mailing list listed link:mail.html[here].
+If you have questions or comments about the software or documentation on this site, please subscribe to the appropriate mailing list listed xref:mail.adoc[here].
 
 
 === Security Issues
@@ -29,13 +29,13 @@ mailto:security@apache.org[security@apache.org].
 === The DB Project
 
 If after reviewing the material on http://db.apache.org/[this site], you have
-questions regarding DB or the link:management.html[Project Management Committee],
-you may post them to the link:mail.html[General mailing list].
+questions regarding DB or the xref:management.adoc[Project Management Committee],
+you may post them to the xref:mail.adoc[General mailing list].
 
 
 **Proposing a New Subproject**
 
-See our link:newproject.html[DB Subproject Proposals] page.
+See our xref:newproject.adoc[DB Subproject Proposals] page.
 
 
 === The DB Website(s)

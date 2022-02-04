@@ -103,7 +103,7 @@ status as a Committer. Getting access back is as simple as re-requesting
 it on the project's Developer mailing list.
 
 A list of some of our current Committers can be found in our
-link:whoweare.html[Project Credits].
+xref:whoweare.adoc[Project Credits].
 
 
 === Management Committee (PMC)
@@ -116,8 +116,8 @@ become a Member, someone on the PMC must nominate the Committer. The
 individual may then be approved with a 3/4 majority of the PMC.
 
 To view the Project Management Committee bylaws, click
-link:management.html[here].
+xref:management.adoc[here].
 
 A list of our current PMC Members can be found in our
-link:whoweare.html[Project Credits].
+xref:whoweare.adoc[Project Credits].
 

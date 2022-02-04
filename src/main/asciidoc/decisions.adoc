@@ -12,9 +12,9 @@
 
 == Decision Making
 
-All link:roles.html[Contributors] are encouraged to participate in
+All xref:roles.adoc[Contributors] are encouraged to participate in
 decisions, but the decision itself is made by those that have
-link:roles.html[Committer] status in the Project. In other words, the
+xref:roles.adoc[Committer] status in the Project. In other words, the
 Project is a *Minimum Threshold Meritocracy*.
 
 Any subscriber to the list may vote on any issue or action item.

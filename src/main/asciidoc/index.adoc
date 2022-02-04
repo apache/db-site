@@ -35,9 +35,9 @@ http://www.apache.org/licenses[license], and a desire to create high quality sof
 
 For more about the Apache DB Project, see
 
-   * link:guidelines.html[DB Project Guidelines]
-   * link:newproject.html[DB Subproject Proposals]
-   * link:contact.html[Contacting Us]
+   * xref:guidelines.adoc[DB Project Guidelines]
+   * xref:newproject.adoc[DB Subproject Proposals]
+   * xref:contact.adoc[Contacting Us]
 
 For more about the Apache Software Foundation, visit the Foundation's Web site
 

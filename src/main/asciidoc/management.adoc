@@ -18,7 +18,7 @@ number of seats on the PMC. The PMC will strive to add every committer within
 DB that, in the opinion of the PMC as determined by a vote, displays the
 capability and desire to help guide the DB project. The PMC will nominate a
 chairperson from amongst their ranks for presentation to the Board. The list
-of current members can be found in our link:whoweare.html[Project Credits].
+of current members can be found in our xref:whoweare.adoc[Project Credits].
 
 
 === Roles
@@ -50,7 +50,7 @@ resignation, action of the board, or vote by the PMC. The Chairman or any
 member may be removed from the PMC by a 3/4 vote of the PMC.
 
 In order to be elected to the PMC, a person must have served as a
-link:roles.html[Committer] and be nominated by a PMC Member. The nominee must
+xref:roles.adoc[Committer] and be nominated by a PMC Member. The nominee must
 receive 3/4 positive vote with a minimum of 3 positive votes. Abstaining PMC
 voters do not affect the result.
 

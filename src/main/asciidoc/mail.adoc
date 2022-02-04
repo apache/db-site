@@ -31,7 +31,7 @@ http://mail-archives.apache.org/mod_mbox/db-general/[Archive]
 This is the project general mailing list.
 This is where ideas, suggestions, and comments are exchanged that deal with the overall DB project.
 Matters that affect the project as a whole are decided here.
-If you are interested in adding a new project to DB, please see link:newproject.html[this page].
+If you are interested in adding a new project to DB, please see xref:newproject.adoc[this page].
 
 === Derby Mailing Lists
 

@@ -12,16 +12,16 @@
 
 == Sitemap
 
-   * link:index.html[Welcome]
-   * link:communication.html[Communication]
-   * link:contact.html[Contact us!]
-   * link:decisions.html[Decision Making]
-   * link:guidelines.html[Project Guidelines]
-   * link:mail.html[Mailing Lists]
-   * link:management.html[PMC Bylaws]
-   * link:newproject.html[Subproject Proposals]
-   * link:roles.html[Roles and Responsibilities]
-   * link:source-repos.html[Source Repositories]
-   * link:source.html[Organization of Source Repositories]
-   * link:whoweare.html[Who We Are]
+   * xref:index.adoc[Welcome]
+   * xref:communication.adoc[Communication]
+   * xref:contact.adoc[Contact us!]
+   * xref:decisions.adoc[Decision Making]
+   * xref:guidelines.adoc[Project Guidelines]
+   * xref:mail.adoc[Mailing Lists]
+   * xref:management.adoc[PMC Bylaws]
+   * xref:newproject.adoc[Subproject Proposals]
+   * xref:roles.adoc[Roles and Responsibilities]
+   * xref:source-repos.adoc[Source Repositories]
+   * xref:source.adoc[Organization of Source Repositories]
+   * xref:whoweare.adoc[Who We Are]
 

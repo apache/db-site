@@ -24,7 +24,7 @@ expected of a DB subproject.
 
 **Meritocracy**.
 Before submitting a proposal, be sure to study the guidelines that
-link:guidelines.html[govern DB subprojects]. These guidelines explain our system
+xref:guidelines.adoc[govern DB subprojects]. These guidelines explain our system
 of Meritocracy, which is the core of the DB Project. If the product
 developers do not wish to adopt this system, then they should **not** donate
 their code to the Project, and should look elsewhere for hosting.
@@ -52,7 +52,7 @@ helpful for there to more than three developers. It is **very** helpful for
 at least one of the developers making the proposal to already be active in a
 DB subproject or other open source initiative.
 
-At DB, the core developers of a product (the link:roles.html[Committers]) manage
+At DB, the core developers of a product (the xref:roles.adoc[Committers]) manage
 the codebases and make the day-to-day development decisions. We are only
 interested in products that can guided by their own development communities.
 DB provides the infrastructure, and some essential guidelines, but the
@@ -98,7 +98,7 @@ The alleged quality of a product is not the prime criteria. To be accepted,
 we must believe that a product will attract volunteers to extend and maintain
 it over the long term. A product like this, arriving with no volunteer
 developers or open source community, does not further
-link:index.html#DB_Mission[DB's mission], and would not be accepted.
+xref:index.adoc#DB_Mission[DB's mission], and would not be accepted.
 
 We generally recommend that an orphaned product start with an independent
 host, and consider making a proposal after it has started to build a
@@ -159,8 +159,8 @@ seem to be more interested in exposure than community.
 === Who Decides
 
 Final acceptance is based the rules defined in the
-link:management.html[Project Management Committee Bylaws] which state that
+xref:management.adoc[Project Management Committee Bylaws] which state that
 "Creation of a new subproject requires approval by 3/4 vote of the PMC." The
 proposal for a new subproject must submitted to the DB General
-link:mail.html[mailing list], where the PMC conducts business.  All discussion
+xref:mail.adoc[mailing list], where the PMC conducts business.  All discussion
 regarding the proposal will occur the General list, including the final vote.
