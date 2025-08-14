@@ -21,7 +21,6 @@ jobs:
         with:
           fetch-depth: 1
 
-
       - name: Build Site
         run: |
           mvn clean compile
