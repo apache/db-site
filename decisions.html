@@ -11,7 +11,7 @@
     <meta name="keywords" content="DB, Derby, JDO, Torque, Apache"/>
     <meta name="description" content="Apache DB"/>
 
-    <title>Organization of Source Repositories</title>
+    <title>Decision Making</title>
 
     <link rel="icon" type="image/png" href="images/db-logo-white.png"/>
 
@@ -33,7 +33,9 @@
 
     <link href="css/asciidoctor/foundation.css" rel="stylesheet"/>
     <link href="css/datanucleus_theme.css" rel="stylesheet"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- font awesome currently not used, uncomment and add fonts into /font-awesome-4.7.0/fonts folder -->
+    <!-- link href="css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"/ -->
 
     
     
@@ -45,24 +47,24 @@
     
     
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap/3.3.7/bootstrap.min.js"></script>
     <script src="js/bootstrap-toc/0.4.1/bootstrap-toc.min.js"></script>
 
     <!-- Coderay syntax formatter -->
     <style type="text/css">
-        /* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+        /*! Stylesheet for CodeRay to loosely match GitHub themes | MIT License */
 pre.CodeRay{background:#f7f7f8}
-.CodeRay .line-numbers{border-right:1px solid currentColor;opacity:.35;padding:0 .5em 0 0}
+.CodeRay .line-numbers{border-right:1px solid;opacity:.35;padding:0 .5em 0 0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 .CodeRay span.line-numbers{display:inline-block;margin-right:.75em}
 .CodeRay .line-numbers strong{color:#000}
 table.CodeRay{border-collapse:separate;border:0;margin-bottom:0;background:none}
 table.CodeRay td{vertical-align:top;line-height:inherit}
 table.CodeRay td.line-numbers{text-align:right}
 table.CodeRay td.code{padding:0 0 0 .75em}
-.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .debug{color:#fff!important;background:navy!important}
 .CodeRay .annotation{color:#007}
-.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-name{color:navy}
 .CodeRay .attribute-value{color:#700}
 .CodeRay .binary{color:#509}
 .CodeRay .comment{color:#998;font-style:italic}
@@ -71,7 +73,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 .CodeRay .char .delimiter{color:#039}
 .CodeRay .class{color:#458;font-weight:bold}
 .CodeRay .complex{color:#a08}
-.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .constant,.CodeRay .predefined-constant{color:teal}
 .CodeRay .color{color:#099}
 .CodeRay .class-variable{color:#369}
 .CodeRay .decorator{color:#b0b}
@@ -86,7 +88,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 .CodeRay .exception{color:inherit}
 .CodeRay .filename{color:#099}
 .CodeRay .function{color:#900;font-weight:bold}
-.CodeRay .global-variable{color:#008080}
+.CodeRay .global-variable{color:teal}
 .CodeRay .hex{color:#058}
 .CodeRay .integer,.CodeRay .float{color:#099}
 .CodeRay .include{color:#555}
@@ -97,7 +99,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 .CodeRay .inline-delimiter{color:#d14}
 .CodeRay .important{color:#555;font-weight:bold}
 .CodeRay .interpreted{color:#b2b}
-.CodeRay .instance-variable{color:#008080}
+.CodeRay .instance-variable{color:teal}
 .CodeRay .label{color:#970}
 .CodeRay .local-variable{color:#963}
 .CodeRay .octal{color:#40e}
@@ -107,7 +109,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 .CodeRay .directive{font-weight:bold}
 .CodeRay .type{font-weight:bold}
 .CodeRay .predefined-type{color:inherit}
-.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .reserved,.CodeRay .keyword{color:#000;font-weight:bold}
 .CodeRay .key{color:#808}
 .CodeRay .key .delimiter{color:#606}
 .CodeRay .key .char{color:#80f}
@@ -127,7 +129,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 .CodeRay .symbol{color:#990073}
 .CodeRay .symbol .content{color:#a60}
 .CodeRay .symbol .delimiter{color:#630}
-.CodeRay .tag{color:#008080}
+.CodeRay .tag{color:teal}
 .CodeRay .tag-special{color:#d70}
 .CodeRay .variable{color:#036}
 .CodeRay .insert{background:#afa}
@@ -234,171 +236,152 @@ table.CodeRay td.code{padding:0 0 0 .75em}
                 
                 <div id="doc-content">
                     <div class="sect1">
-<h2 id="_organization_of_source_repositories">Organization of Source Repositories</h2>
+<h2 id="_decision_making">Decision Making</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Project&#8217;s codebase is maintained in shared information repositories using
-Subversion. Only Committers have write access to these repositories. Everyone
-has anonymous read access.</p>
+<p>All <a href="roles.html">Contributors</a> are encouraged to participate in
+decisions, but the decision itself is made by those that have
+<a href="roles.html">Committer</a> status in the Project. In other words, the
+Project is a <strong>Minimum Threshold Meritocracy</strong>.</p>
 </div>
 <div class="paragraph">
-<p>All Java Language source code in the repository must be written in
-conformance to the
-<a href="http://www.oracle.com/technetwork/java/codeconvtoc-136057.html">Code
-Conventions for the Java Programming Language</a> as published
-by Sun, or in conformance with another well-defined convention specified by
-the subproject.</p>
+<p>Any subscriber to the list may vote on any issue or action item.
+However, the only binding votes are those cast by a Committer. If the
+vote is about a change to the source code or documentation and the
+primary author is a Contributor and not a Committer, the primary author
+of what is being changed may also cast a binding vote on that issue.</p>
+</div>
+<div class="paragraph">
+<p>The act of voting carries certain obligations. Voting members are not
+only stating their opinion, they are also agreeing to help do the work.</p>
+</div>
+<div class="paragraph">
+<p>Each vote can be made in one of three flavors:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>+1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Yes," "Agree," or "the action should be performed."</p>
+<p class="tableblock">        On some issues this is only binding if the voter has tested the
+        action on their own system(s).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>+/-0</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Abstain," "no opinion".</p>
+<p class="tableblock">        An abstention may have detrimental effects if too many people
+        abstain.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"No."</p>
+<p class="tableblock">        On issues where consensus is required, this vote counts as a
+        <strong>veto</strong>. All vetos must contain an explanation of
+        why the veto is appropriate. Vetos with no explanation are void.
+        No veto can be overruled. If you disagree with the veto, you
+        should lobby the person who cast the veto. Voters intending to
+        veto an action item should make their opinions known to the
+        group immediately so that the problem can be remedied as early
+        as possible.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>An action requiring consensus approval must receive at least <strong>3 binding
++1</strong> votes and <strong>no binding vetos</strong>. An action requiring majority
+approval must receive at least <strong>3 binding +1</strong> votes and more <strong>+1</strong>
+votes than <strong>-1</strong> votes. All other action items are considered to have
+lazy approval until somebody votes <strong>-1</strong>, after which point they are
+decided by either consensus or majority vote, depending on the type of
+action item.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_action_items">Action Items</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>All decisions revolve around <strong>Action Items</strong>. Action Items consist of the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Long Term Plans</p>
+</li>
+<li>
+<p>Short Term Plans</p>
+</li>
+<li>
+<p>Release Plan</p>
+</li>
+<li>
+<p>Release Testing</p>
+</li>
+<li>
+<p>Showstoppers</p>
+</li>
+<li>
+<p>Product Changes</p>
+</li>
+</ul>
 </div>
 <div class="sect2">
-<h3 id="_license">License</h3>
+<h3 id="_long_term_plans">Long Term Plans</h3>
 <div class="paragraph">
-<p>All source code committed to the Project&#8217;s repositories must be covered by
-the <a href="http://www.apache.org/foundation/licence-FAQ.html">Apache License</a> or
-contain a copyright and license that allows redistribution under the same
-conditions as the Apache License.</p>
-</div>
-<div class="paragraph">
-<p>Committers should update the copyright notice on the Apache License to
-include the current year when they revise a source file. If it is 2002, and
-you revise a source file from 1999, change the copyright notice in the
-license to cite "1999, 2002". If the file was from 2001, we would change it
-to 2001-2002. And so forth. This will happen most often in the early part of
-a year, but maintenance of the copyright date should occur year-round, as
-needed.</p>
-</div>
-<div class="paragraph">
-<p>Any code, document, or binary that is committed to the Project&#8217;s
-repositories, but not being donated to the ASF, must be clearly marked as
-such. All contributors should have a
-<a href="http://www.apache.org/licenses/#clas">Contributor License Agreement</a> on
-file.</p>
-</div>
-<div class="paragraph">
-<p>Any JAR committed to the Project&#8217;s repositories <strong>must</strong> be licensed for
-redistribution. BSD and MPL style licenses are generally fine, but many Sun
-JARs do not permit redistribution.</p>
+<p>Long term plans are simply announcements that group members are working
+on particular issues related to the Project. These are not voted on, but
+Committers who do not agree with a particular plan, or think that an
+alternative plan would be better, are obligated to inform the group of
+their feelings.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_status_files">Status Files</h3>
+<h3 id="_short_term_plans">Short Term Plans</h3>
 <div class="paragraph">
-<p>Each of the Project&#8217;s active source code repositories contain a file named
-STATUS which is used to keep track of the agenda and plans for work within
-that repository. The status file includes information about release plans, a
-summary of code changes committed since the last release, a list of proposed
-changes that are under discussion, brief notes about items that individual
-developers are working on or want discussion about, and anything else that
-may be useful to help the group track progress.</p>
-</div>
-<div class="paragraph">
-<p>It is recommended that the active status files are automatically posted to
-the developer mailing lists three times per week.</p>
+<p>Short term plans are announcements that a volunteer is working on a
+particular set of documentation or code files with the implication that
+other volunteers should avoid them or try to coordinate their changes.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_branches">Branches</h3>
+<h3 id="_release_plan">Release Plan</h3>
 <div class="paragraph">
-<p>Groups are allowed to create a branch for release cycles, etc. They are
-expected to merge completely back with the main branch as soon as their
-release cycle is complete. All branches currently in use should be documented
-by the respective projects. For example,
-<a href="http://db.apache.org/derby/dev/derby_source.html#Branches">Derby</a> has a page
-on the site that details the branches currently in use.</p>
+<p>A release plan is used to keep all volunteers aware of when a release is
+desired, who will be the release manager, when the repository will be
+frozen to create a release, and other assorted information to keep
+volunteers from tripping over each other. Lazy majority decides each
+issue in a release plan.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_changes">Changes</h3>
+<h3 id="_release_testing">Release Testing</h3>
 <div class="paragraph">
-<p>Simple patches to fix bugs can be committed then reviewed. With a
-commit-then-review process, the Committer is trusted to have a high degree of
-confidence in the change.</p>
+<p>After a new release is built, it must be tested before being released to
+the public. Majority approval is required before the release can be
+made.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_showstoppers">Showstoppers</h3>
 <div class="paragraph">
-<p>Doubtful changes, new features, and large scale overhauls need to be
-discussed before committing them into the repository. Any change that affects
-the semantics of an existing API function, the size of the program,
-configuration data formats, or other major areas must receive consensus
-approval before being committed.</p>
+<p>Showstoppers are issues that require a fix be in place before the next
+public release. They are listed in the status file in order to focus
+special attention on these problems. An issue becomes a showstopper when
+it is listed as such in the status file and remains so by lazy
+consensus.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_product_changes">Product Changes</h3>
 <div class="paragraph">
-<p>Related changes should be committed as a group, or very closely together.
-Half complete projects should never be committed to the main branch of a
-development repository. All code changes must be successfully compiled on the
-developer&#8217;s platform before being committed. Also, any unit tests should also
-pass.</p>
-</div>
-<div class="paragraph">
-<p>The current source code tree for a subproject should be capable of complete
-compilation at all times. However, it is sometimes impossible for a developer
-on one platform to avoid breaking some other platform when a change is
-committed. If it is anticipated that a given change will break the build on
-some other platform, the committer must indicate that in the commit message.</p>
-</div>
-<div class="paragraph">
-<p>A committed change must be reversed if it is vetoed by one of the voting
-members and the veto conditions cannot be immediately satisfied by the
-equivalent of a "bug fix" commit. The veto must be rescinded before the
-change can be included in any public release.
-Patches</p>
-</div>
-<div class="paragraph">
-<p>When a specific change to a product is proposed for discussion or voting on
-the appropriate development mailing list, it should be presented in the form
-of input to the patch command. When sent to the mailing list, the message
-should contain a Subject beginning with [PATCH] and a distinctive one-line
-summary in the subject corresponding to the action item for that patch.</p>
-</div>
-<div class="paragraph">
-<p>The patch should be created by using the svn diff command from the original
-software file(s) to the modified software file(s). It is recommended that you
-submit patches against the latest Subversion versions of the software in
-order to avoid conflicts. This will also ensure that you are not submitting a
-patch for a problem that has already been resolved.</p>
-</div>
-<div class="paragraph">
-<p>For example:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>diff -u Main.java.orig Main.java &gt;&gt; patchfile.txt</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>or (preferred)</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>svn diff Main.java &gt;&gt; patchfile.txt</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>or (Win32)</p>
-</div>
-<div class="paragraph">
-<p>You can use a GUI front-end for <a href="http://subversion.apache.org/">Subversion</a>,
-or you can install <a href="http://www.cygwin.com">Cygwin</a> which will enable you to
-use the bash shell and also installs a lot of other utilities (such as diff
-and patch) that will turn your PC into a virtual Unix machine.</p>
-</div>
-<div class="paragraph">
-<p>All patches necessary to address an action item should be concatenated
-within a single patch message. If later modification to the patch proves
-necessary, the entire new patch should be posted and not just the difference
-between the two patches.</p>
-</div>
-<div class="paragraph">
-<p>If your email client line wraps the patch, consider placing the patch file up
-on a website and sending a message to the development list with the URL so
-that the developers with commit access can download the commit the patch file
-more easily. You can also add the patch as part of a bug report.</p>
-</div>
-<div class="paragraph">
-<p>When a patch has been checked into Subversion, the person who checked in the
-patch should send a message to the person who sent the patch in as well as
-the mailing list specifying that the patch has been checked in. The reason is
-that not everyone watches commit messages and it is helpful for others to
-know what has been checked in and when in order to help prevent people from
-applying the patch at the same time.</p>
+<p>Changes to the products of the Project, including code and
+documentation, will appear as action items in the status file. All
+product changes to the currently active repository are subject to lazy
+consensus.</p>
 </div>
 </div>
 </div>

@@ -11,7 +11,7 @@
     <meta name="keywords" content="DB, Derby, JDO, Torque, Apache"/>
     <meta name="description" content="Apache DB"/>
 
-    <title>Welcome!</title>
+    <title>Subproject Proposals</title>
 
     <link rel="icon" type="image/png" href="images/db-logo-white.png"/>
 
@@ -33,7 +33,9 @@
 
     <link href="css/asciidoctor/foundation.css" rel="stylesheet"/>
     <link href="css/datanucleus_theme.css" rel="stylesheet"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- font awesome currently not used, uncomment and add fonts into /font-awesome-4.7.0/fonts folder -->
+    <!-- link href="css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"/ -->
 
     
     
@@ -45,24 +47,24 @@
     
     
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap/3.3.7/bootstrap.min.js"></script>
     <script src="js/bootstrap-toc/0.4.1/bootstrap-toc.min.js"></script>
 
     <!-- Coderay syntax formatter -->
     <style type="text/css">
-        /* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+        /*! Stylesheet for CodeRay to loosely match GitHub themes | MIT License */
 pre.CodeRay{background:#f7f7f8}
-.CodeRay .line-numbers{border-right:1px solid currentColor;opacity:.35;padding:0 .5em 0 0}
+.CodeRay .line-numbers{border-right:1px solid;opacity:.35;padding:0 .5em 0 0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 .CodeRay span.line-numbers{display:inline-block;margin-right:.75em}
 .CodeRay .line-numbers strong{color:#000}
 table.CodeRay{border-collapse:separate;border:0;margin-bottom:0;background:none}
 table.CodeRay td{vertical-align:top;line-height:inherit}
 table.CodeRay td.line-numbers{text-align:right}
 table.CodeRay td.code{padding:0 0 0 .75em}
-.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .debug{color:#fff!important;background:navy!important}
 .CodeRay .annotation{color:#007}
-.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-name{color:navy}
 .CodeRay .attribute-value{color:#700}
 .CodeRay .binary{color:#509}
 .CodeRay .comment{color:#998;font-style:italic}
@@ -71,7 +73,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 .CodeRay .char .delimiter{color:#039}
 .CodeRay .class{color:#458;font-weight:bold}
 .CodeRay .complex{color:#a08}
-.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .constant,.CodeRay .predefined-constant{color:teal}
 .CodeRay .color{color:#099}
 .CodeRay .class-variable{color:#369}
 .CodeRay .decorator{color:#b0b}
@@ -86,7 +88,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 .CodeRay .exception{color:inherit}
 .CodeRay .filename{color:#099}
 .CodeRay .function{color:#900;font-weight:bold}
-.CodeRay .global-variable{color:#008080}
+.CodeRay .global-variable{color:teal}
 .CodeRay .hex{color:#058}
 .CodeRay .integer,.CodeRay .float{color:#099}
 .CodeRay .include{color:#555}
@@ -97,7 +99,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 .CodeRay .inline-delimiter{color:#d14}
 .CodeRay .important{color:#555;font-weight:bold}
 .CodeRay .interpreted{color:#b2b}
-.CodeRay .instance-variable{color:#008080}
+.CodeRay .instance-variable{color:teal}
 .CodeRay .label{color:#970}
 .CodeRay .local-variable{color:#963}
 .CodeRay .octal{color:#40e}
@@ -107,7 +109,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 .CodeRay .directive{font-weight:bold}
 .CodeRay .type{font-weight:bold}
 .CodeRay .predefined-type{color:inherit}
-.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .reserved,.CodeRay .keyword{color:#000;font-weight:bold}
 .CodeRay .key{color:#808}
 .CodeRay .key .delimiter{color:#606}
 .CodeRay .key .char{color:#80f}
@@ -127,7 +129,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 .CodeRay .symbol{color:#990073}
 .CodeRay .symbol .content{color:#a60}
 .CodeRay .symbol .delimiter{color:#630}
-.CodeRay .tag{color:#008080}
+.CodeRay .tag{color:teal}
 .CodeRay .tag-special{color:#d70}
 .CodeRay .variable{color:#036}
 .CodeRay .insert{background:#afa}
@@ -233,80 +235,189 @@ table.CodeRay td.code{padding:0 0 0 .75em}
                     <!-- no heading -->
                 
                 <div id="doc-content">
-                    <div id="index" class="paragraph">
-<p><span class="image right"><img src="images/db-logo-blue.png" alt="db logo blue"></span></p>
-</div>
-<hr>
-<div class="sect1">
-<h2 id="_welcome">Welcome!</h2>
+                    <div class="sect1">
+<h2 id="_subproject_proposals">Subproject Proposals</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Not every software product is suited for life at DB. Before proposing a new
+subproject, it is important to read this document carefully and determine
+whether your product is a good fit.</p>
+</div>
+<div class="sect2">
+<h3 id="_criteria">Criteria</h3>
+<div class="paragraph">
+<p>Here are some best practices that we will expect to find in a successful
+proposal. This is not a checklist, but guidelines to help communicate what is
+expected of a DB subproject.</p>
+</div>
+<div class="paragraph">
+<p><strong>Meritocracy</strong>.
+Before submitting a proposal, be sure to study the guidelines that
+<a href="guidelines.html">govern DB subprojects</a>. These guidelines explain our system
+of Meritocracy, which is the core of the DB Project. If the product
+developers do not wish to adopt this system, then they should <strong>not</strong> donate
+their code to the Project, and should look elsewhere for hosting.</p>
+</div>
+<div class="paragraph">
+<p><strong>Community</strong>.
+DB is a Project of the <a href="http://www.apache.org/">Apache Software Foundation</a>.
+A prime purpose of the ASF is to ensure that the Apache projects continue to
+exist beyond the participation of individual volunteers. Accordingly, a prime
+criteria required of any new subproject is that it already enjoys&#8201;&#8212;&#8201;or has a
+high potential for attracting&#8201;&#8212;&#8201;an active community of developers and users.</p>
+</div>
+<div class="paragraph">
+<p>Proposals for non-established products have been accepted, most often when
+the proposal was tendered by experienced open source developers, who
+understand what it means to build a community.</p>
+</div>
+<div class="paragraph">
+<p>A design document, developer and user documentation, example code, and a
+working implementation all help to increase the likelihood of acceptance.
+Well-documented products tend to build stronger communities than products
+that rely source code and JavaDocs alone.</p>
+</div>
+<div class="paragraph">
+<p><strong>Core Developers</strong>.
+To considered, a product must have at least 3 active developers who are
+already involved with the codebase. This is an absolute minimum, and it is
+helpful for there to more than three developers. It is <strong>very</strong> helpful for
+at least one of the developers making the proposal to already be active in a
+DB subproject or other open source initiative.</p>
+</div>
+<div class="paragraph">
+<p>At DB, the core developers of a product (the <a href="roles.html">Committers</a>) manage
+the codebases and make the day-to-day development decisions. We are only
+interested in products that can guided by their own development communities.
+DB provides the infrastructure, and some essential guidelines, but the
+Committers must take responsibility for developing and releasing their own
+product.</p>
+</div>
+<div class="paragraph">
+<p><strong>Alignment with existing Apache subprojects</strong>.
+Products that are already used by existing subprojects make attractive
+candidates, since bringing such a codebase into the Apache fold tends to
+benefit both communities. Products with dependencies on existing Apache
+products are also attractive for the same reason.</p>
+</div>
+<div class="paragraph">
+<p><strong>Scope</strong>.
+DB products are generally server-side software solutions written for the Java
+platform. Proposals for products outside this venue will have greater
+difficulty in being accepted.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_warning_signs">Warning Signs</h3>
+<div class="paragraph">
+<p>These are anti-patterns that we have found detrimental to the success of a
+proposal. Some of these are lesson learned from the school of hard-knocks,
+others are taken from proposals which have been rejected in the past. All
+will raise a red flag, making it unlikely that a proposal will be accepted.</p>
+</div>
+<div class="paragraph">
+<p><strong>Orphaned products</strong>.
+Products which have lost their corporate sponsor (for whatever reason) do
+<strong>not</strong> make good candidates. These products will lack a development
+community and won&#8217;t have the support needed to succeed under the DB umbrella.</p>
+</div>
+<div class="paragraph">
+<p>For example, we have seen proposals that contain paragraphs like this:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>FooProduct is currently a production quality product, and in
+fact is being used by a live website. It was developed as a
+product by FooCompany, with the intention that we would sell
+it. However, due to various economic factors such as the
+decline in FooProduct's intended market and the
+recent difficulties in obtaining venture capital, we have
+decided that at this time it is not feasible for us to
+continue in that direction.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The alleged quality of a product is not the prime criteria. To be accepted,
+we must believe that a product will attract volunteers to extend and maintain
+it over the long term. A product like this, arriving with no volunteer
+developers or open source community, does not further
+<a href="index.html#DB_Mission">DB&#8217;s mission</a>, and would not be accepted.</p>
+</div>
+<div class="paragraph">
+<p>We generally recommend that an orphaned product start with an independent
+host, and consider making a proposal after it has started to build a
+community.</p>
+</div>
+<div class="paragraph">
+<p><strong>Inexperience with open source</strong>.
+We often receive proposals that start with "We will open our software if you
+choose to accept it." This is the wrong way to approach the proposal process.
+A closed source project does not have an open community, and so we have no
+way to tell if the developers can work in an open source environment.
+Products that have lived on their own and have started to develop their own
+community, have a much better chance of being accepted.</p>
+</div>
+<div class="paragraph">
+<p>If the product&#8217;s developers have not worked with open source before, it is
+recommended that they spend some time contributing to an existing open source
+project before trying to manage one of their own. Since DB subprojects are
+managed by their own Committers, it is important that a new product supported
+by people who understand how open source works.</p>
+</div>
+<div class="paragraph">
+<p><strong>Homogenous developers</strong>.
+Apache communities attract developers with diverse backgrounds. Products with
+a tightly-knit team of developers may have difficulty shepherding new
+developers into the fold. It is vital that we believe the developers will
+discuss development issues openly with the community, and <strong>not</strong> make
+decisions behind closed doors. We are especially wary of products with
+developers who all share a common employer or geographic location.</p>
+</div>
+<div class="paragraph">
+<p><strong>Reliance on salaried developers</strong>.
+DB has strong ties to the business community. Many of our developers are
+encouraged by their employers to work open source projects as part of their
+regular job. We feel that this is a Good Thing, and corporations should be
+entitled to contribute to open source, same as anyone else. However, we are
+wary of products which rely strongly on developers who only work on open
+source products when they are paid to do so. A product at DB must continue to
+exist beyond the participation of individual volunteers. We believe the best
+indicator of success is when developers volunteer their own time to work open
+source projects.</p>
+</div>
+<div class="paragraph">
+<p><strong>No ties to other Apache products</strong>.
+Products <strong>without</strong> a tie to any existing Apache product, and that have
+strong dependencies on alternatives to Apache products, do not make good
+candidates. Many Apache products are related through common licenses,
+technologies, and through their volunteers. Products without licensing,
+technology, or volunteers in common will have trouble attracting a strong
+community.</p>
+</div>
+<div class="paragraph">
+<p><strong>A fascination with the Apache brand</strong>. The
+<a href="http://www.apache.org/licenses/">Apache Software License</a> is quite liberal
+and allows for the code to used in commercial products. This can induce
+people to donate a commercial codebase to the ASF, allow it developed as open
+source for a time, and then convert it back to commercial use. While this
+would legal under the Apache Software License, we are wary of proposals that
+seem to be more interested in exposure than community.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_subproject_alternatives">Subproject Alternatives</h3>
 
 </div>
-</div>
-<div class="sect1">
-<h2 id="DB_Mission">DB Mission</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_who_decides">Who Decides</h3>
 <div class="paragraph">
-<p>DB is a Project of the
-<a href="#Apache_Software_Foundation">Apache Software Foundation</a>, charged with the
-creation and maintenance of commercial-quality open-source database solutions
-based on software licensed to the Foundation, for distribution at no charge to
-the public.</p>
+<p>Final acceptance is based the rules defined in the
+<a href="management.html">Project Management Committee Bylaws</a> which state that
+"Creation of a new subproject requires approval by 3/4 vote of the PMC." The
+proposal for a new subproject must submitted to the DB General
+<a href="mail.html">mailing list</a>, where the PMC conducts business.  All discussion
+regarding the proposal will occur the General list, including the final vote.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="Apache_Software_Foundation">Apache Software Foundation</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The Apache Software Foundation provides support for the Apache community of
-open-source software <a href="https://www.apache.org/index.html#projects-list">projects</a>.
-The Apache projects are characterized by a collaborative, consensus based
-development process, an open and pragmatic software
-<a href="http://www.apache.org/licenses">license</a>, and a desire to create high quality software that leads the way in its field.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_more_information">More Information</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>For more about the Apache DB Project, see</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="guidelines.html">DB Project Guidelines</a></p>
-</li>
-<li>
-<p><a href="newproject.html">DB Subproject Proposals</a></p>
-</li>
-<li>
-<p><a href="contact.html">Contacting Us</a></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>For more about the Apache Software Foundation, visit the Foundation&#8217;s Web site</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="http://www.apache.org/">Foundation Home page</a></p>
-</li>
-<li>
-<p><a href="http://www.apache.org/foundation/licence-FAQ.html">Apache License and Distribution FAQ</a></p>
-</li>
-<li>
-<p><a href="http://www.apache.org/dev/project-creation.html">Procedures for Creating an ASF Project</a></p>
-</li>
-<li>
-<p><a href="http://www.apache.org/foundation/sponsorship.html">Sponsorship</a></p>
-</li>
-<li>
-<p><a href="http://www.apache.org/foundation/thanks.html">Thanks</a></p>
-</li>
-</ul>
 </div>
 </div>
 </div>

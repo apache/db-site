@@ -11,7 +11,7 @@
     <meta name="keywords" content="DB, Derby, JDO, Torque, Apache"/>
     <meta name="description" content="Apache DB"/>
 
-    <title>Decision Making</title>
+    <title>Mailing Lists</title>
 
     <link rel="icon" type="image/png" href="images/db-logo-white.png"/>
 
@@ -33,7 +33,9 @@
 
     <link href="css/asciidoctor/foundation.css" rel="stylesheet"/>
     <link href="css/datanucleus_theme.css" rel="stylesheet"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- font awesome currently not used, uncomment and add fonts into /font-awesome-4.7.0/fonts folder -->
+    <!-- link href="css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"/ -->
 
     
     
@@ -45,24 +47,24 @@
     
     
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap/3.3.7/bootstrap.min.js"></script>
     <script src="js/bootstrap-toc/0.4.1/bootstrap-toc.min.js"></script>
 
     <!-- Coderay syntax formatter -->
     <style type="text/css">
-        /* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+        /*! Stylesheet for CodeRay to loosely match GitHub themes | MIT License */
 pre.CodeRay{background:#f7f7f8}
-.CodeRay .line-numbers{border-right:1px solid currentColor;opacity:.35;padding:0 .5em 0 0}
+.CodeRay .line-numbers{border-right:1px solid;opacity:.35;padding:0 .5em 0 0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 .CodeRay span.line-numbers{display:inline-block;margin-right:.75em}
 .CodeRay .line-numbers strong{color:#000}
 table.CodeRay{border-collapse:separate;border:0;margin-bottom:0;background:none}
 table.CodeRay td{vertical-align:top;line-height:inherit}
 table.CodeRay td.line-numbers{text-align:right}
 table.CodeRay td.code{padding:0 0 0 .75em}
-.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .debug{color:#fff!important;background:navy!important}
 .CodeRay .annotation{color:#007}
-.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-name{color:navy}
 .CodeRay .attribute-value{color:#700}
 .CodeRay .binary{color:#509}
 .CodeRay .comment{color:#998;font-style:italic}
@@ -71,7 +73,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 .CodeRay .char .delimiter{color:#039}
 .CodeRay .class{color:#458;font-weight:bold}
 .CodeRay .complex{color:#a08}
-.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .constant,.CodeRay .predefined-constant{color:teal}
 .CodeRay .color{color:#099}
 .CodeRay .class-variable{color:#369}
 .CodeRay .decorator{color:#b0b}
@@ -86,7 +88,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 .CodeRay .exception{color:inherit}
 .CodeRay .filename{color:#099}
 .CodeRay .function{color:#900;font-weight:bold}
-.CodeRay .global-variable{color:#008080}
+.CodeRay .global-variable{color:teal}
 .CodeRay .hex{color:#058}
 .CodeRay .integer,.CodeRay .float{color:#099}
 .CodeRay .include{color:#555}
@@ -97,7 +99,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 .CodeRay .inline-delimiter{color:#d14}
 .CodeRay .important{color:#555;font-weight:bold}
 .CodeRay .interpreted{color:#b2b}
-.CodeRay .instance-variable{color:#008080}
+.CodeRay .instance-variable{color:teal}
 .CodeRay .label{color:#970}
 .CodeRay .local-variable{color:#963}
 .CodeRay .octal{color:#40e}
@@ -107,7 +109,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 .CodeRay .directive{font-weight:bold}
 .CodeRay .type{font-weight:bold}
 .CodeRay .predefined-type{color:inherit}
-.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .reserved,.CodeRay .keyword{color:#000;font-weight:bold}
 .CodeRay .key{color:#808}
 .CodeRay .key .delimiter{color:#606}
 .CodeRay .key .char{color:#80f}
@@ -127,7 +129,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 .CodeRay .symbol{color:#990073}
 .CodeRay .symbol .content{color:#a60}
 .CodeRay .symbol .delimiter{color:#630}
-.CodeRay .tag{color:#008080}
+.CodeRay .tag{color:teal}
 .CodeRay .tag-special{color:#d70}
 .CodeRay .variable{color:#036}
 .CodeRay .insert{background:#afa}
@@ -234,152 +236,117 @@ table.CodeRay td.code{padding:0 0 0 .75em}
                 
                 <div id="doc-content">
                     <div class="sect1">
-<h2 id="_decision_making">Decision Making</h2>
+<h2 id="_mailing_lists">Mailing Lists</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>All <a href="roles.html">Contributors</a> are encouraged to participate in
-decisions, but the decision itself is made by those that have
-<a href="roles.html">Committer</a> status in the Project. In other words, the
-Project is a <strong>Minimum Threshold Meritocracy</strong>.</p>
-</div>
-<div class="paragraph">
-<p>Any subscriber to the list may vote on any issue or action item.
-However, the only binding votes are those cast by a Committer. If the
-vote is about a change to the source code or documentation and the
-primary author is a Contributor and not a Committer, the primary author
-of what is being changed may also cast a binding vote on that issue.</p>
-</div>
-<div class="paragraph">
-<p>The act of voting carries certain obligations. Voting members are not
-only stating their opinion, they are also agreeing to help do the work.</p>
-</div>
-<div class="paragraph">
-<p>Each vote can be made in one of three flavors:</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>+1</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"Yes," "Agree," or "the action should be performed."</p>
-<p class="tableblock">        On some issues this is only binding if the voter has tested the
-        action on their own system(s).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>+/-0</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"Abstain," "no opinion".</p>
-<p class="tableblock">        An abstention may have detrimental effects if too many people
-        abstain.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-1</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"No."</p>
-<p class="tableblock">        On issues where consensus is required, this vote counts as a
-        <strong>veto</strong>. All vetos must contain an explanation of
-        why the veto is appropriate. Vetos with no explanation are void.
-        No veto can be overruled. If you disagree with the veto, you
-        should lobby the person who cast the veto. Voters intending to
-        veto an action item should make their opinions known to the
-        group immediately so that the problem can be remedied as early
-        as possible.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>An action requiring consensus approval must receive at least <strong>3 binding
-+1</strong> votes and <strong>no binding vetos</strong>. An action requiring majority
-approval must receive at least <strong>3 binding +1</strong> votes and more <strong>+1</strong>
-votes than <strong>-1</strong> votes. All other action items are considered to have
-lazy approval until somebody votes <strong>-1</strong>, after which point they are
-decided by either consensus or majority vote, depending on the type of
-action item.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_action_items">Action Items</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>All decisions revolve around <strong>Action Items</strong>. Action Items consist of the following:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Long Term Plans</p>
-</li>
-<li>
-<p>Short Term Plans</p>
-</li>
-<li>
-<p>Release Plan</p>
-</li>
-<li>
-<p>Release Testing</p>
-</li>
-<li>
-<p>Showstoppers</p>
-</li>
-<li>
-<p>Product Changes</p>
-</li>
-</ul>
+<p>Below are the major mailing lists used in the DB project.</p>
 </div>
 <div class="sect2">
-<h3 id="_long_term_plans">Long Term Plans</h3>
+<h3 id="_general_and_announcement_lists">General and Announcement Lists</h3>
 <div class="paragraph">
-<p>Long term plans are simply announcements that group members are working
-on particular issues related to the Project. These are not voted on, but
-Committers who do not agree with a particular plan, or think that an
-alternative plan would be better, are obligated to inform the group of
-their feelings.</p>
+<p>The DB General Project List</p>
+</div>
+<div class="paragraph">
+<p><a href="mailto:general-subscribe@db.apache.org">Subscribe</a> |
+<a href="mailto:general-unsubscribe@db.apache.org">Unsubscribe</a> |
+<a href="http://mail-archives.apache.org/mod_mbox/db-general/">Archive</a>
+(<a href="http://www.mail-archive.com/general@db.apache.org/">alternative</a>)</p>
+</div>
+<div class="paragraph">
+<p>The DB General Notifications List</p>
+</div>
+<div class="paragraph">
+<p><a href="mailto:notifications-subscribe@db.apache.org">Subscribe</a> |
+<a href="mailto:notifications-unsubscribe@db.apache.org">Unsubscribe</a> |
+<a href="http://mail-archives.apache.org/mod_mbox/db-general/">Archive</a>
+(<a href="http://www.mail-archive.com/notifications@db.apache.org/">alternative</a>)</p>
+</div>
+<div class="paragraph">
+<p>This is the project general mailing list.
+This is where ideas, suggestions, and comments are exchanged that deal with the overall DB project.
+Matters that affect the project as a whole are decided here.
+If you are interested in adding a new project to DB, please see <a href="newproject.html">this page</a>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_short_term_plans">Short Term Plans</h3>
+<h3 id="_derby_mailing_lists">Derby Mailing Lists</h3>
 <div class="paragraph">
-<p>Short term plans are announcements that a volunteer is working on a
-particular set of documentation or code files with the implication that
-other volunteers should avoid them or try to coordinate their changes.</p>
+<p>Derby User List</p>
+</div>
+<div class="paragraph">
+<p><a href="mailto:derby-user-subscribe@db.apache.org">Subscribe</a> |
+<a href="mailto:derby-user-unsubscribe@db.apache.org">Unsubscribe</a> |
+<a href="http://mail-archives.apache.org/mod_mbox/db-derby-user/">Archive</a>
+(<a href="http://www.mail-archive.com/derby-user@db.apache.org/">alternative</a>)</p>
+</div>
+<div class="paragraph">
+<p>Derby Developer List</p>
+</div>
+<div class="paragraph">
+<p><a href="mailto:derby-dev-subscribe@db.apache.org">Subscribe</a> |
+<a href="mailto:derby-dev-unsubscribe@db.apache.org">Unsubscribe</a> |
+<a href="http://mail-archives.apache.org/mod_mbox/db-derby-dev/">Archive</a>
+(<a href="http://www.mail-archive.com/derby-dev@db.apache.org/">alternative</a>)</p>
+</div>
+<div class="paragraph">
+<p>Derby Commits List</p>
+</div>
+<div class="paragraph">
+<p><a href="mailto:derby-commits-subscribe@db.apache.org">Subscribe</a> |
+<a href="mailto:derby-commits-unsubscribe@db.apache.org">Unsubscribe</a> |
+<a href="http://mail-archives.apache.org/mod_mbox/db-derby-commits/">Archive</a>
+(<a href="http://www.mail-archive.com/derby-commits@db.apache.org/">alternative</a>)</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_release_plan">Release Plan</h3>
+<h3 id="_java_data_objects_jdo_mailing_lists">Java Data Objects (JDO) Mailing Lists</h3>
 <div class="paragraph">
-<p>A release plan is used to keep all volunteers aware of when a release is
-desired, who will be the release manager, when the repository will be
-frozen to create a release, and other assorted information to keep
-volunteers from tripping over each other. Lazy majority decides each
-issue in a release plan.</p>
+<p>JDO User List</p>
+</div>
+<div class="paragraph">
+<p><a href="mailto:jdo-user-subscribe@db.apache.org">Subscribe</a> |
+<a href="mailto:jdo-user-unsubscribe@db.apache.org">Unsubscribe</a> |
+<a href="http://mail-archives.apache.org/mod_mbox/db-jdo-user/">Archive</a>
+(<a href="http://www.mail-archive.com/jdo-user@db.apache.org/">alternative</a>)</p>
+</div>
+<div class="paragraph">
+<p>JDO Developer List</p>
+</div>
+<div class="paragraph">
+<p><a href="mailto:jdo-dev-subscribe@db.apache.org">Subscribe</a> |
+<a href="mailto:jdo-dev-unsubscribe@db.apache.org">Unsubscribe</a> |
+<a href="http://mail-archives.apache.org/mod_mbox/db-jdo-dev/">Archive</a>
+(<a href="http://www.mail-archive.com/jdo-dev@db.apache.org/">alternative</a>)</p>
+</div>
+<div class="paragraph">
+<p>JDO Commits List</p>
+</div>
+<div class="paragraph">
+<p><a href="mailto:jdo-commits-subscribe@db.apache.org">Subscribe</a> |
+<a href="mailto:jdo-commits-unsubscribe@db.apache.org">Unsubscribe</a> |
+<a href="http://mail-archives.apache.org/mod_mbox/db-jdo-commits/">Archive</a>
+(<a href="http://www.mail-archive.com/jdo-commits@db.apache.org/">alternative</a>)</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_release_testing">Release Testing</h3>
+<h3 id="_torque_mailing_lists">Torque Mailing Lists</h3>
 <div class="paragraph">
-<p>After a new release is built, it must be tested before being released to
-the public. Majority approval is required before the release can be
-made.</p>
+<p>Torque User List</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_showstoppers">Showstoppers</h3>
 <div class="paragraph">
-<p>Showstoppers are issues that require a fix be in place before the next
-public release. They are listed in the status file in order to focus
-special attention on these problems. An issue becomes a showstopper when
-it is listed as such in the status file and remains so by lazy
-consensus.</p>
+<p><a href="mailto:torque-user-subscribe@db.apache.org">Subscribe</a> |
+<a href="mailto:torque-user-unsubscribe@db.apache.org">Unsubscribe</a> |
+<a href="http://mail-archives.apache.org/mod_mbox/db-torque-user/">Archive</a>
+(<a href="http://www.mail-archive.com/torque-user@db.apache.org/">alternative</a>)</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_product_changes">Product Changes</h3>
 <div class="paragraph">
-<p>Changes to the products of the Project, including code and
-documentation, will appear as action items in the status file. All
-product changes to the currently active repository are subject to lazy
-consensus.</p>
+<p>Torque Developer List</p>
+</div>
+<div class="paragraph">
+<p><a href="mailto:torque-dev-subscribe@db.apache.org">Subscribe</a> |
+<a href="mailto:torque-dev-unsubscribe@db.apache.org">Unsubscribe</a> |
+<a href="http://mail-archives.apache.org/mod_mbox/db-torque-dev/">Archive</a>
+(<a href="http://www.mail-archive.com/torque-dev@db.apache.org/">alternative</a>)</p>
 </div>
 </div>
 </div>

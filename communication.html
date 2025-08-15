@@ -11,7 +11,7 @@
     <meta name="keywords" content="DB, Derby, JDO, Torque, Apache"/>
     <meta name="description" content="Apache DB"/>
 
-    <title>Contact us!</title>
+    <title>Communication</title>
 
     <link rel="icon" type="image/png" href="images/db-logo-white.png"/>
 
@@ -33,7 +33,9 @@
 
     <link href="css/asciidoctor/foundation.css" rel="stylesheet"/>
     <link href="css/datanucleus_theme.css" rel="stylesheet"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- font awesome currently not used, uncomment and add fonts into /font-awesome-4.7.0/fonts folder -->
+    <!-- link href="css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"/ -->
 
     
     
@@ -45,24 +47,24 @@
     
     
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap/3.3.7/bootstrap.min.js"></script>
     <script src="js/bootstrap-toc/0.4.1/bootstrap-toc.min.js"></script>
 
     <!-- Coderay syntax formatter -->
     <style type="text/css">
-        /* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+        /*! Stylesheet for CodeRay to loosely match GitHub themes | MIT License */
 pre.CodeRay{background:#f7f7f8}
-.CodeRay .line-numbers{border-right:1px solid currentColor;opacity:.35;padding:0 .5em 0 0}
+.CodeRay .line-numbers{border-right:1px solid;opacity:.35;padding:0 .5em 0 0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 .CodeRay span.line-numbers{display:inline-block;margin-right:.75em}
 .CodeRay .line-numbers strong{color:#000}
 table.CodeRay{border-collapse:separate;border:0;margin-bottom:0;background:none}
 table.CodeRay td{vertical-align:top;line-height:inherit}
 table.CodeRay td.line-numbers{text-align:right}
 table.CodeRay td.code{padding:0 0 0 .75em}
-.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .debug{color:#fff!important;background:navy!important}
 .CodeRay .annotation{color:#007}
-.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-name{color:navy}
 .CodeRay .attribute-value{color:#700}
 .CodeRay .binary{color:#509}
 .CodeRay .comment{color:#998;font-style:italic}
@@ -71,7 +73,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 .CodeRay .char .delimiter{color:#039}
 .CodeRay .class{color:#458;font-weight:bold}
 .CodeRay .complex{color:#a08}
-.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .constant,.CodeRay .predefined-constant{color:teal}
 .CodeRay .color{color:#099}
 .CodeRay .class-variable{color:#369}
 .CodeRay .decorator{color:#b0b}
@@ -86,7 +88,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 .CodeRay .exception{color:inherit}
 .CodeRay .filename{color:#099}
 .CodeRay .function{color:#900;font-weight:bold}
-.CodeRay .global-variable{color:#008080}
+.CodeRay .global-variable{color:teal}
 .CodeRay .hex{color:#058}
 .CodeRay .integer,.CodeRay .float{color:#099}
 .CodeRay .include{color:#555}
@@ -97,7 +99,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 .CodeRay .inline-delimiter{color:#d14}
 .CodeRay .important{color:#555;font-weight:bold}
 .CodeRay .interpreted{color:#b2b}
-.CodeRay .instance-variable{color:#008080}
+.CodeRay .instance-variable{color:teal}
 .CodeRay .label{color:#970}
 .CodeRay .local-variable{color:#963}
 .CodeRay .octal{color:#40e}
@@ -107,7 +109,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 .CodeRay .directive{font-weight:bold}
 .CodeRay .type{font-weight:bold}
 .CodeRay .predefined-type{color:inherit}
-.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .reserved,.CodeRay .keyword{color:#000;font-weight:bold}
 .CodeRay .key{color:#808}
 .CodeRay .key .delimiter{color:#606}
 .CodeRay .key .char{color:#80f}
@@ -127,7 +129,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 .CodeRay .symbol{color:#990073}
 .CodeRay .symbol .content{color:#a60}
 .CodeRay .symbol .delimiter{color:#630}
-.CodeRay .tag{color:#008080}
+.CodeRay .tag{color:teal}
 .CodeRay .tag-special{color:#d70}
 .CodeRay .variable{color:#036}
 .CodeRay .insert{background:#afa}
@@ -234,65 +236,57 @@ table.CodeRay td.code{padding:0 0 0 .75em}
                 
                 <div id="doc-content">
                     <div class="sect1">
-<h2 id="_contact_us">Contact us</h2>
+<h2 id="_communication">Communication</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Typical points of contact are listed below. Don&#8217;t hesitate to get in touch if you have questions related to the Apache DB project!</p>
+<p>The Project obtains its strength from the communication of its members.
+In order for members to easily communicate with each other, the Project
+has a variety of mailing lists. These lists, with the exception of the
+announcement lists, are not moderated and anybody is more than welcome
+to join them. However, you must be subscribed to post to a list.</p>
+</div>
+<div class="paragraph">
+<p>To reduce the bandwidth demands on everyone, mail should not contain
+attachments. It is recommended that you place interesting material (such
+as patches) either within the body of the message or provide a URL for
+retrieval.</p>
+</div>
+<div class="paragraph">
+<p>To join the mailing lists, see our <a href="mail.html">Mailing List</a> page.</p>
+</div>
+<div class="paragraph">
+<p>The Project&#8217;s list fall into the categories below.</p>
 </div>
 <div class="sect2">
-<h3 id="_product_support">Product Support</h3>
+<h3 id="_announcement_lists">Announcement Lists</h3>
 <div class="paragraph">
-<p>If you have questions or comments about the software or documentation on this site, please subscribe to the appropriate mailing list listed <a href="mail.html">here</a>.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_security_issues">Security Issues</h3>
-<div class="paragraph">
-<p>If you would like to report a security issue with any of our products, you may contact
-<a href="mailto:security@apache.org">security@apache.org</a>.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_the_db_project">The DB Project</h3>
-<div class="paragraph">
-<p>If after reviewing the material on <a href="http://db.apache.org/">this site</a>, you have
-questions regarding DB or the <a href="management.html">Project Management Committee</a>,
-you may post them to the <a href="mail.html">General mailing list</a>.</p>
-</div>
-<div class="paragraph">
-<p><strong>Proposing a New Subproject</strong></p>
-</div>
-<div class="paragraph">
-<p>See our <a href="newproject.html">DB Subproject Proposals</a> page.</p>
+<p>Announcement lists are very low traffic designed to communicate
+important information, such as final releases of a subproject&#8217;s code, to
+a wide audience.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_db_websites">The DB Website(s)</h3>
+<h3 id="_user_lists">User Lists</h3>
 <div class="paragraph">
-<p>Most of the DB Website is maintained by the individual subprojects. Any comments regarding a product&#8217;s web pages should be directed to the appropriate subproject.</p>
-</div>
-<div class="paragraph">
-<p>The portion of the Web site under db.apache.org/ <strong>site</strong> is managed as a joint
-effort by the subprojects and the DB Project Management Committee. Comments
-regarding these pages can be directed to the General mailing list, or to the
-[DB Webmaster&#8217;s](mailto:webmaster@db.apache.org) mail box.</p>
-</div>
-<div class="paragraph">
-<p>If you are unsure where to post, contact the
-<a href="mailto:webmaster@db.apache.org">DB Webmaster</a>, who will direct you to the appropriate
-party.</p>
+<p>User lists are for users of a product to converse about such things as
+configuration and operating of the products of the Project.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_apache_software_foundation">The Apache Software Foundation</h3>
+<h3 id="_developer_lists">Developer Lists</h3>
 <div class="paragraph">
-<p>The DB Project is an effort of the
-<a href="http://www.apache.org/">Apache Software Foundation</a>. The address for general
-ASF correspondence and licensing questions is <a href="mailto:apache@apache.org">apache@apache.org</a></p>
+<p>Developer lists are for the developers of the project. On these lists
+suggestions and comments for code changes are discussed and action items
+are raised and voted on. For the developer community, these lists are
+the very center of the project where all the "action" is.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_commit_lists">Commit Lists</h3>
 <div class="paragraph">
-<p>You can find more contact information for the Apache Software Foundation on the
-<a href="http://www.apache.org/foundation/contact.html">contact page of the main Apache site</a>.</p>
+<p>The commit lists are where all cvs code commit messages are sent. All
+committers are required to subscribe to this list so that they can stay
+aware of changes to the repository.</p>
 </div>
 </div>
 </div>
