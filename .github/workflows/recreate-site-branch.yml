@@ -76,7 +76,7 @@ jobs:
           git reset
           rm .gitignore
           git add target/site
-          git add .asf.yaml.publish
+          git add .asf.yaml.publish .htaccess
           git clean -df
 
 
@@ -84,7 +84,8 @@ jobs:
       - name: Move Content and Site Configuration
         if: success()
         run: |
-          git mv -v target/site/* ./
+          mkdir -v content
+          git mv -v target/site/* content/
           git mv -v .asf.yaml.publish .asf.yaml
 
 
