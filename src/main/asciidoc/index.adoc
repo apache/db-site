@@ -6,7 +6,7 @@
 
 [[index]]
 
-image:images/db-logo-blue.png[float="right"]
+image:https://www.apache.org/img/feather_glyph_notm.png[float="right"]
 
 '''''
 
