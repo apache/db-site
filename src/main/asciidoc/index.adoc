@@ -8,7 +8,7 @@
 
 '''''
 
-== Welcome!
+== Welcome to the Apache DB Project!
 
 [#DB_Mission]
 == DB Mission
