@@ -115,9 +115,9 @@ others can also learn from common mistakes and as a community we all grow togeth
 
   |Tilmann Zäschke |tilmannz |tilmannz@apache.org |The Apache Software Foundation |PMC Member, JDO
 
-  |Tobias Bouschen |tobous |tobous@apache.org | The Apache Software Foundation |PMC Member, JDO
-
   |Tomohito Nakayama |tmnk |tmnk@apache.org |The Apache Software Foundation |PMC Member, Derby
+
+  |Tobias Bouschen |tobous |tobous@apache.org | The Apache Software Foundation |PMC Member, JDO
 
   |Thomas Dudziak |tomdz |tomdz@apache.org |The Apache Software Foundation |PMC Member
 
