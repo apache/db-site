@@ -94,8 +94,10 @@
             </button>
             <!-- 'style' added to align image with navbar. FIX THIS -->
             <a class="navbar-brand" href="https://db.apache.org/">
-                <!-- img style="margin-top: -12px;" alt="Brand" width="405.5" height="45.5" src="<%= (attr :_basedir) %>images/db-logo-blue.png"/ -->
-                <img style="margin-top: -12px;" alt="Brand" width="250" height="45.5" src="https://www.apache.org/img/feather_glyph_notm.png"/>
+                <div style="display: flex; align-items: center; margin-top: -12px;">
+                    <img alt="Brand" height="45.5" src="https://www.apache.org/img/feather_glyph_notm.png"/>
+                    <label>DB Apache</label>
+                </div>
             </a>
             <!-- TODO Any way to abstract the version from Maven? -->
             <!-- a class="navbar-brand" href="<%= (attr :_basedir) %>index.html">Apache DB</a -->
