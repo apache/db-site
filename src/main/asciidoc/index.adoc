@@ -6,8 +6,6 @@
 
 [[index]]
 
-image:https://www.apache.org/img/feather_glyph_notm.png[float="right"]
-
 '''''
 
 == Welcome!
