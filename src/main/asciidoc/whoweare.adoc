@@ -117,6 +117,8 @@ others can also learn from common mistakes and as a community we all grow togeth
 
   |Tomohito Nakayama |tmnk |tmnk@apache.org |The Apache Software Foundation |PMC Member, Derby
 
+  |Tobias Bouschen |tobous |tobous@apache.org | The Apache Software Foundation |PMC Member, JDO
+
   |Thomas Dudziak |tomdz |tomdz@apache.org |The Apache Software Foundation |PMC Member
 
   |Thomas Vandahl |tv |tv@apache.org |The Apache Software Foundation |PMC Member, Torque
@@ -133,7 +135,5 @@ All DB PMC member listed above are DB commiters, plus the following Apache commi
 |Name |Id |Email |Organization |Roles
 
   |Brett Bergquist |bbergquist |bbergquist@apache.org | |
-
-  |Tobias Bouschen |tobous |tobous@apache.org | |
 
 |===

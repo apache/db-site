@@ -6,11 +6,9 @@
 
 [[index]]
 
-image:images/db-logo-blue.png[float="right"]
-
 '''''
 
-== Welcome!
+== Welcome to the Apache DB Project!
 
 [#DB_Mission]
 == DB Mission
